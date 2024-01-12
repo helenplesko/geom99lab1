@@ -28,8 +28,8 @@ Now your repository will be accessible under GitHub Pages (an HTML Web Server) a
 
 In this repository you will need to create content in this repository from the following activities:
 
-- [x] Google MyMaps Sharkspotters tutorial. 
-- [ ] Maps - Simple HTML Map Example
+- [x] Google MyMaps Sharkspotters tutorial [My Sharkspotters Map](https://helenplesko.github.io/geom99lab1/mymaps/sharkspotters.html)
+- [x] Maps - Simple HTML Map Example [My Simple Map of Triglav National Park in Slovenia](https://helenplesko.github.io/geom99lab1/services/simplemap.html)
 - [ ] Routes - Directions API - URL request JSON response
 - [ ] Modify Dynamic Map Clustering example to show Ontario Parks
 - [ ] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
