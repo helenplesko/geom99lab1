@@ -9,6 +9,12 @@ https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destinati
 ```
 As provided, it will not work. That is because you must provide an API Key. The IP-whitelisted API key will work with this (the directions API is meant to be used server-side, not on a webpage itself. It is a service provided on the web, not a web page itself). Modify the URL above to replace YOUR_API_KEY with the second key provided in this course and test it in a tab. 
 
+Modified URL with IP-whitelisted API key:
+
+```
+https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+```
+
 With a valid API Key, the direction results returned are JSON. (What is JSON? https://www.w3schools.com/whatis/whatis_json.asp)
 
 ## Explore the Hierarchy of the returned JSON
