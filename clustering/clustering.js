@@ -13,7 +13,6 @@ function initMap() {
     return new google.maps.Marker({
       position: location,
       label: labels[i % labels.length],
-      color: red,
     });
   });
   // Add a marker clusterer to manage the markers.
