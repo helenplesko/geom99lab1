@@ -31,7 +31,7 @@ In this repository you will need to create content in this repository from the f
 - [x] Google MyMaps Sharkspotters tutorial [My Sharkspotters Map](https://helenplesko.github.io/geom99lab1/mymaps/sharkspotters.html)
 - [x] Maps - Simple HTML Map Example [My Simple Map of Triglav National Park in Slovenia](https://helenplesko.github.io/geom99lab1/services/simplemap.html)
 - [ ] Routes - Directions API - URL request JSON response
-- [ ] Modify Dynamic Map Clustering example to show Ontario Parks
+- [x] Modify Dynamic Map Clustering example to show Ontario Parks [My Dynamic Map of Ontario Parks](https://helenplesko.github.io/geom99lab1/clustering/ontarioparks.html)
 - [ ] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
 
 > Optional Tip: You can check the above boxes by editing this MarkDown document and adding an `x` between the `[ ]`, like this: `[x]`
