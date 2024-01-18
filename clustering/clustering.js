@@ -13,7 +13,7 @@ function initMap() {
     return new google.maps.Marker({
       position: location,
       label: labels[i % labels.length],
-      textSize: 12
+      color: red,
     });
   });
   // Add a marker clusterer to manage the markers.
@@ -22,7 +22,13 @@ function initMap() {
       "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     zoomOnClick: true,
     maxZoom: 11,
+    minZoom: 5,
   });
+  // Edit the clusters
+  const styles = MarkerClusterer.getStyles();
+  for (let i=0; i<styles.length; i++) {
+    styles[i].textSize = 14;
+  }
 }
 const locations = [
   { lat: 49.758123, lng: -92.65349},
