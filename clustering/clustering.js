@@ -24,11 +24,6 @@ function initMap() {
     maxZoom: 11,
     minZoom: 5,
   });
-  // Edit the clusters
-  const styles = MarkerClusterer.getStyles();
-  for (let i=0; i<styles.length; i++) {
-    styles[i].textSize = 14;
-  }
 }
 const locations = [
   { lat: 49.758123, lng: -92.65349},
