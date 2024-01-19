@@ -8,25 +8,29 @@ Be creative and use multiple parameters from the API documentation to earn a top
 
 ## Directions URL
 
+Slovenia is a beautiful country and is a wonderful place to visit in the summertime. There are many sites to see there, including Ljubljana (their capital city), neighbouring towns, and century-old castles. This past summer, my family and I were able to visit the home country of my grandparents and some of the sites previously mentioned. 
+
+Here is a driving route with an origin of Ljubljana, Slovenia, and a destination of Bled Castle, in Bled, Slovenia. From Ljubljana, the driver will stop for coffee at Slaščičarna in Kavarna Evropa in Kranj, then for gas at the OMV in Radovljica, and lastly at the Market by the Lake in Bled for a snack before heading to the Bled Castle. The route avoids tolls, the distances are in metric unit of measurement, and the departure time is set to 8am on August 1, 2024 (Slovenia time, 2am Toronto time).
+
 ```
-https://YourDirectionsApiURLGoesHere
+https://maps.googleapis.com/maps/api/directions/json?origin=place_id%3AChIJ0YaYlvUxZUcRIOw_ghz4AAQ&destination=place_id%3AChIJDU8PNy2RekcRsGO3F_-nwA0&waypoints=place_id%3AChIJZTQDSR24ekcRjzqpxKImqHc%7Cplace_id%3AChIJtz8EnByWekcRaN1V-6b-Btk%7Cplace_id%3AChIJUWh1akaXekcR9HwnzRQtKBo&departure_time=1722492000&avoid=tolls&units=metric&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
 
-Copy/paste the JSON results and save them into the empty file ```mydirections.json``` in this repository
+I used this tool to convert the time to an integer: https://www.unixtimestamp.com/
+
+The JSON results for this route are pasted into ```mydirections.json``` in this repository.
 
 ## Optional URLs
 
-Read the Rubric to find out about what options exist to earn more marks. Here is where you can provide these additional links to place ids or other items telling a story about your chosen directions API
+At the second waypoint (OMV gas station) you might see some planes, helicopters, or even hot air balloons nearby. That is because the Airport Lesce is located nearby.
+```
+https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ0wL-uE-WekcR6-_C8JHoWSs&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+```
 
-### Simple option:
-
-(returns map-preferred) Maps PlaceID search: https://www.google.com/maps/place/?q=place_id:ChIJFfiCrdo4Qm0RqPwuOAVtaj8
-### Efficient option
-
-(returns JSON) API PlaceID link https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJV2BQ4laeekgRFauLvdXbFXE&key=<INSERTKEY>
-
-  which the JSON will have a CID that can be directly used as a URL like https://maps.google.com/?cid=4569584641105657000
-
+When at the top of Bled Castle, you get a beautiful view of the Church in the middle of Lake Bled.
+```
+https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJcWwyNDiRekcRQ-xUYGhbpdY&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
+```
 
 ____
 ## Rubric

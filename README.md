@@ -30,7 +30,7 @@ In this repository you will need to create content in this repository from the f
 
 - [x] Google MyMaps Sharkspotters tutorial [My Sharkspotters Map](https://helenplesko.github.io/geom99lab1/mymaps/sharkspotters.html)
 - [x] Maps - Simple HTML Map Example [My Simple Map of Triglav National Park in Slovenia](https://helenplesko.github.io/geom99lab1/services/simplemap.html)
-- [ ] Routes - Directions API - URL request JSON response
+- [x] Routes - Directions API - URL request JSON response [My Route from Ljubljana to Bled Castle in Slovenia](https://maps.googleapis.com/maps/api/directions/json?origin=place_id%3AChIJ0YaYlvUxZUcRIOw_ghz4AAQ&destination=place_id%3AChIJDU8PNy2RekcRsGO3F_-nwA0&waypoints=place_id%3AChIJZTQDSR24ekcRjzqpxKImqHc%7Cplace_id%3AChIJtz8EnByWekcRaN1V-6b-Btk%7Cplace_id%3AChIJUWh1akaXekcR9HwnzRQtKBo&departure_time=1722492000&avoid=tolls&units=metric&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE)
 - [x] Modify Dynamic Map Clustering example to show Ontario Parks [My Dynamic Map of Ontario Parks](https://helenplesko.github.io/geom99lab1/clustering/ontarioparks.html)
 - [ ] Create your Story using Google Dynamic Maps (JavaScript) in the provided folder
 

@@ -1,1 +1,1533 @@
-Remove this text and paste your JSON results from the Directions API
+{
+    "geocoded_waypoints" : 
+    [
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJ0YaYlvUxZUcRIOw_ghz4AAQ",
+          "types" : 
+          [
+             "locality",
+             "political"
+          ]
+       },
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJZTQDSR24ekcRjzqpxKImqHc",
+          "types" : 
+          [
+             "cafe",
+             "establishment",
+             "food",
+             "point_of_interest"
+          ]
+       },
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJtz8EnByWekcRaN1V-6b-Btk",
+          "types" : 
+          [
+             "establishment",
+             "gas_station",
+             "point_of_interest"
+          ]
+       },
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJUWh1akaXekcR9HwnzRQtKBo",
+          "types" : 
+          [
+             "cafe",
+             "establishment",
+             "food",
+             "point_of_interest",
+             "restaurant",
+             "store"
+          ]
+       },
+       {
+          "geocoder_status" : "OK",
+          "place_id" : "ChIJDU8PNy2RekcRsGO3F_-nwA0",
+          "types" : 
+          [
+             "establishment",
+             "museum",
+             "point_of_interest",
+             "tourist_attraction"
+          ]
+       }
+    ],
+    "routes" : 
+    [
+       {
+          "bounds" : 
+          {
+             "northeast" : 
+             {
+                "lat" : 46.3737649,
+                "lng" : 14.5060239
+             },
+             "southwest" : 
+             {
+                "lat" : 46.0569006,
+                "lng" : 14.0980151
+             }
+          },
+          "copyrights" : "Map data ©2024",
+          "legs" : 
+          [
+             {
+                "distance" : 
+                {
+                   "text" : "25.2 km",
+                   "value" : 25240
+                },
+                "duration" : 
+                {
+                   "text" : "33 mins",
+                   "value" : 1954
+                },
+                "end_address" : "Poštna ulica 3, 4000 Kranj, Slovenia",
+                "end_location" : 
+                {
+                   "lat" : 46.2383969,
+                   "lng" : 14.3579646
+                },
+                "start_address" : "Ljubljana, Slovenia",
+                "start_location" : 
+                {
+                   "lat" : 46.0569544,
+                   "lng" : 14.5057201
+                },
+                "steps" : 
+                [
+                   {
+                      "distance" : 
+                      {
+                         "text" : "76 m",
+                         "value" : 76
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 31
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.0575998,
+                         "lng" : 14.5060239
+                      },
+                      "html_instructions" : "Head \u003cb\u003enorth\u003c/b\u003e on \u003cb\u003eSlovenska cesta\u003c/b\u003e toward \u003cb\u003eTivolska cesta\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "}nbxGwcpwA{@_@eA["
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.0569544,
+                         "lng" : 14.5057201
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 375
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 80
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.0569657,
+                         "lng" : 14.5017318
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eTivolska cesta\u003c/b\u003e (signs for \u003cb\u003eMaribor\u003c/b\u003e)",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "_sbxGsepwAQECRYjDIpA@p@@~@F~@Hp@Jp@VfAVt@Pf@FNp@vA@BVd@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.0575998,
+                         "lng" : 14.5060239
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "2.8 km",
+                         "value" : 2819
+                      },
+                      "duration" : 
+                      {
+                         "text" : "5 mins",
+                         "value" : 322
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.0778402,
+                         "lng" : 14.4819232
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eCelovška cesta\u003c/b\u003e (signs for \u003cb\u003eKranj\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAerodrom\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eAvstrija\u003c/b\u003e)",
+                      "maneuver" : "turn-right",
+                      "polyline" : 
+                      {
+                         "points" : "aobxGyjowAJ\\@H?H@L?FAFQf@aBlBGTYVc@`@UTCBsExE_BfBGFq@j@mBnCa@b@aBxBUV]\\SRSPk@d@{A~@KHOJOH_DnBq@b@o@Zy@\\sBj@yBx@_At@kAlAUTqCjCYTQFa@\\YTOLq@b@w@v@QPs@p@eAfAy@j@wAtAoAjAkE|D_@\\cIzHOL]ZsDjD_@\\ONeAfAu@z@ORs@t@g@r@c@j@q@x@y@dAYXABMLON{@|@c@^[XIFKH_@X_@Vs@d@a@VC@]Pk@^"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.0569657,
+                         "lng" : 14.5017318
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 393
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 44
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.0810263,
+                         "lng" : 14.4797284
+                      },
+                      "html_instructions" : "Continue straight to stay on \u003cb\u003eCelovška cesta\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "oqfxG_okwA}Az@eAf@q@\\i@\\WNg@Xi@\\qDhCaBbA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.0778402,
+                         "lng" : 14.4819232
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "3.4 km",
+                         "value" : 3385
+                      },
+                      "duration" : 
+                      {
+                         "text" : "5 mins",
+                         "value" : 279
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1048869,
+                         "lng" : 14.4531512
+                      },
+                      "html_instructions" : "Continue straight onto \u003cb\u003eCelovška cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eRoute 8\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Celovška cesta\u003c/div\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "megxGiakwAuErCm@b@{CfBgAr@g@^o@h@q@j@o@l@q@t@SRORo@l@}AdBi@f@WV]^MR[Vo@p@k@j@SRSLWVA?KJIJe@d@aBvAw@h@{BlBu@n@_@ZkAdAwBlBQLm@n@k@Zq@j@c@`@KFmC|BcAz@o@j@mB`Bc@^YR_@\\o@h@WRe@`@a@b@{@x@e@f@i@l@QROR}@bASX_@j@CBcAvA_AzAeAdBk@x@QV{@xAk@|@{@vAU^[j@eA|AkAlBgAhBy@tAk@hAQXo@lAEFQ\\EFKRQTMVk@nA{@zAO`@CN_@l@Yf@[t@_@n@CDS^oAvBS^[l@a@v@_@z@m@bAo@jASb@S^S\\ADMPIBIL_@b@OLMN_@^GDOPON[XKJwAvA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.0810263,
+                         "lng" : 14.4797284
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "5.1 km",
+                         "value" : 5110
+                      },
+                      "duration" : 
+                      {
+                         "text" : "6 mins",
+                         "value" : 365
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1386102,
+                         "lng" : 14.4128653
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003eJeperca - Ljubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLjubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eŠentvid\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Jeperca - Ljubljana/\u003cwbr/\u003eŠentvid\u003c/div\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "qzkxGe{ewAoAhAi@^e@\\SNSNA?]TQPA?m@d@]Vc@b@STY^QXIJc@n@QXQVe@t@S\\Ud@Uf@KXIVITQp@Y`ASr@Un@Qf@IR[t@Sd@MRABKP_AzAMLQTgAbACBgDrCkBhAGBaF|C]RSLcIbFmAr@s@^wB`AC?mB|@[NeAf@c@R{BfAaFtCoBlA_@TaB`AiAr@w@d@c@Vk@\\]RUNIDm@^YNYNA@s@\\SHgBh@_AT_@LQD]Li@Tc@Va@Vu@n@kAdAk@h@i@`@YTGDCBKFOHe@Xc@TyAx@g@ZIDOL[TUTIHMLEDGHA@QTINMRGJEHIPGJKVIPADITSj@IVK\\GTGXERERCJCLETCJCPCPCVEd@A@ARCT?HAB?PARATAL?P?HAV?`B?nD?pB?ZAh@Ad@A^CTAJCNCNGRENENGLELEJINGLKRADWf@Ub@]l@m@lAUb@ABS`@CBWf@Yh@Q\\EJo@pAk@lAi@bAu@|Ag@dA_AlBiItOGDGLGLINgAnBA@c@r@a@l@e@n@]^o@l@{@v@EDuAjAGFmAjAEBiAbAMPQHgAp@w@ZiAz@OPUXc@f@SZCBMRKROVIXGPOb@Oj@ELk@jCiA~EG^"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1048869,
+                         "lng" : 14.4531512
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.7 km",
+                         "value" : 692
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 56
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1443495,
+                         "lng" : 14.4119738
+                      },
+                      "html_instructions" : "Continue straight onto \u003cb\u003eGorenjska cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eJeperca - Ljubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eŠentvid\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "imrxGm_~vAq@rBQ`@Yd@CDU\\WZWNUF}@Jo@HgAJG?S?w@AO?OASASAOAA?UGA?C?]KGAMCw@OgASc@Ke@KiCc@eAGoBH"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1386102,
+                         "lng" : 14.4128653
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 365
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 29
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1471786,
+                         "lng" : 14.4097564
+                      },
+                      "html_instructions" : "Continue straight to stay on \u003cb\u003eGorenjska cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eJeperca - Ljubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eŠentvid\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "eqsxGyy}vAC?QDQBM@SDA?QFa@JQJ]PWLk@ZcBrAe@`@WVUVi@f@KFCBKHUTIHKVITMX"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1443495,
+                         "lng" : 14.4119738
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.2 km",
+                         "value" : 230
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 20
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1484502,
+                         "lng" : 14.4078715
+                      },
+                      "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit and stay on \u003cb\u003eGorenjska cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eJeperca - Ljubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eŠentvid\u003c/b\u003e heading to \u003cb\u003eKranj\u003c/b\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : 
+                      {
+                         "points" : "{btxG_l}vAACCACCAACACAC?CAC?C@C?C@CBC@C@ABCBADABADABAD?D?D?D?B?D@D?D@B@D@BBDe@r@QXm@fAw@rAc@v@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1471786,
+                         "lng" : 14.4097564
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "1.7 km",
+                         "value" : 1660
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 88
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.1596754,
+                         "lng" : 14.394582
+                      },
+                      "html_instructions" : "Continue straight to stay on \u003cb\u003eGorenjska cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eJeperca - Ljubljana\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eŠentvid\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Jeperca - Ljubljana/\u003cwbr/\u003eŠentvid\u003c/div\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "yjtxGe`}vAa@r@]h@SZmAjBKRa@n@u@lAq@hAc@t@Wd@Yd@uC~Ec@v@m@bAq@hAYd@Wb@q@hAqAnByA~BmApBi@dAkApCeC~Fe@jAy@fB]n@Y^_@j@gA~@]TWN]P[JYHm@Na@LIB{@Te@JsF`BoAn@SFE@GBWF"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1484502,
+                         "lng" : 14.4078715
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "7.9 km",
+                         "value" : 7853
+                      },
+                      "duration" : 
+                      {
+                         "text" : "6 mins",
+                         "value" : 366
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.22505899999999,
+                         "lng" : 14.3570544
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003eGorenja vas - Reteče\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLabore\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Labore\u003c/div\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "_qvxGcmzvAa@JyEzAgAh@gBjAaAr@aCdBoBlAa@TeD`BeBv@yFhC]PaAd@CBo@^c@Zo@f@y@n@_BtAk@d@y@p@s@f@q@`@k@\\i@XaAh@_Bx@k@Xw@^kAp@mCvAsDhB]ReExBa@T}C~AiB`A{Ax@cCpA]PeB~@cAf@}BlAu@`@oIlEcG`DYL{C`BqAn@uEdCiExB}@\\qAb@mB`@cB^cANkAHiAJa@D{@HeB\\k@Nw@Vm@VkAd@iAh@i@ViAf@cAb@o@XIDgBt@sCnAiA^C@]LiCz@{IdCuAb@kGnCwCtASHa@VcAp@_@ZiB|As@t@]XgAr@yBtAkE`BIBWHaBd@eA\\g@Lc@Lg@Pq@Zk@V{@b@[RwB|Ai@`@wDnCeAp@qCnAQHa@PaAb@_Br@kBt@IBgBj@_B\\oCp@c@HeAVa@Jg@J_AXs@Rw@ZKFo@Xs@`@{BrAc@Ve@XWLsDxBcB`AKHk@\\sAv@iBfAaB~@gBdAe@TaDlBSN]P_@Tw@b@u@d@iCzA}FjD{A~@g@XsDfBuB~@ODkA`@a@LkAb@oAb@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.1596754,
+                         "lng" : 14.394582
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.2 km",
+                         "value" : 225
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 23
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2270433,
+                         "lng" : 14.3573044
+                      },
+                      "html_instructions" : "Take the ramp to \u003cb\u003eJezersko\u003c/b\u003e",
+                      "maneuver" : "ramp-right",
+                      "polyline" : 
+                      {
+                         "points" : "sicyGqbsvAGCAAA?C?A?G@c@LKBIBI?E?E?M?E?C?IAA?SCQAQCc@EMAOCs@MKCSCKIGCKCOC"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.22505899999999,
+                         "lng" : 14.3570544
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.9 km",
+                         "value" : 851
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 68
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2303662,
+                         "lng" : 14.3672325
+                      },
+                      "html_instructions" : "Merge onto \u003cb\u003eKranj\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePreddvor - Kranj\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePrimskovo\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Preddvor - Kranj/\u003cwbr/\u003ePrimskovo\u003c/div\u003e",
+                      "maneuver" : "merge",
+                      "polyline" : 
+                      {
+                         "points" : "_vcyGcdsvAMi@G]]wAs@cDAAm@oCMQIa@CGESG[Mo@CMS_AI_@Mm@Mi@Mm@COI_@]_BMo@]}AMo@Mo@Mm@EQEOESAUAUEQEOKe@K_@Sy@K_@?AAE?AEOk@}BK[Qi@Ww@Sk@c@iA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2270433,
+                         "lng" : 14.3573044
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 367
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 67
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.232377,
+                         "lng" : 14.3636931
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eCesta 1. maja\u003c/b\u003e (signs for \u003cb\u003eCenter\u003c/b\u003e)",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "yjdyGebuvAGUML{AbCOXGJWl@w@rC_@rAYt@IPWf@{AzC"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2303662,
+                         "lng" : 14.3672325
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.8 km",
+                         "value" : 756
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 92
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2379799,
+                         "lng" : 14.3585024
+                      },
+                      "html_instructions" : "Continue straight to stay on \u003cb\u003eCesta 1. maja\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "kwdyGaltvAU`@a@x@[j@k@dAEPU`@k@|@oA|A_BnBeAjAGHu@p@]Xs@p@qBhBq@b@ULOHKDk@TcAVkEpA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.232377,
+                         "lng" : 14.3636931
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "83 m",
+                         "value" : 83
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 24
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2383969,
+                         "lng" : 14.3579646
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e at \u003cb\u003eŽupančičeva ulica\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "kzeyGsksvAANCVCVAVALCFA@A@A@C@EBE@C?A?C?E?EACAEEKE"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2379799,
+                         "lng" : 14.3585024
+                      },
+                      "travel_mode" : "DRIVING"
+                   }
+                ],
+                "traffic_speed_entry" : [],
+                "via_waypoint" : []
+             },
+             {
+                "distance" : 
+                {
+                   "text" : "21.9 km",
+                   "value" : 21909
+                },
+                "duration" : 
+                {
+                   "text" : "28 mins",
+                   "value" : 1666
+                },
+                "end_address" : "Ljubljanska cesta 71, 4240 Radovljica, Slovenia",
+                "end_location" : 
+                {
+                   "lat" : 46.3392521,
+                   "lng" : 14.1918724
+                },
+                "start_address" : "Poštna ulica 3, 4000 Kranj, Slovenia",
+                "start_location" : 
+                {
+                   "lat" : 46.2383969,
+                   "lng" : 14.3579646
+                },
+                "steps" : 
+                [
+                   {
+                      "distance" : 
+                      {
+                         "text" : "83 m",
+                         "value" : 83
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 25
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2379799,
+                         "lng" : 14.3585024
+                      },
+                      "html_instructions" : "Head \u003cb\u003esouthwest\u003c/b\u003e toward \u003cb\u003eŽupančičeva ulica\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "_}eyGghsvAJDDDB@D@D?B?@?B?DADCBA@A@A@ABG@M@WBWBW@O"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2383969,
+                         "lng" : 14.3579646
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.8 km",
+                         "value" : 756
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 106
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2323361,
+                         "lng" : 14.363639
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eCesta 1. maja\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : 
+                      {
+                         "points" : "kzeyGsksvAjEqAbAWj@UJENITMp@c@pBiBr@q@\\Yt@q@FIdAkA~AoBnA}Aj@}@Ta@NK`AiBz@_B"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2379799,
+                         "lng" : 14.3585024
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "1.1 km",
+                         "value" : 1125
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 107
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2381172,
+                         "lng" : 14.3534517
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eSavska cesta\u003c/b\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : 
+                      {
+                         "points" : "cwdyGwktvANTFJ@@HNFJBFBFBJ@FBH@F@D@F?F@F@F?D@F?D?^Af@?JALANCJCLG\\EJCFM^OZKXYd@Wd@CBU`@Yd@c@t@aAdBU`@QXGJw@vAy@|AU`@w@bBUj@y@jCUx@Ux@Sn@Qr@ABYz@Qh@e@tAg@lAc@x@SVABYZC@WRi@TYHG@QDUBcADMBaAL_@FQF"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2323361,
+                         "lng" : 14.363639
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 448
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 42
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2413724,
+                         "lng" : 14.3554816
+                      },
+                      "html_instructions" : "At the roundabout, continue straight onto \u003cb\u003eLjubljanska cesta\u003c/b\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : 
+                      {
+                         "points" : "g{eyGalrvA?A?A?A?A?A?A?AA??AAA?AA?A??AA?A?A?A??@A??@A??@A??@?@?@A??@?@?@_@GcAQQEQCc@IKCUGc@KIC{@SAAaAYOEwAa@kA]g@OGCEEGGCS?K?MAY?G@{@?c@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2381172,
+                         "lng" : 14.3534517
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.3 km",
+                         "value" : 326
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 43
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.244122,
+                         "lng" : 14.3545245
+                      },
+                      "html_instructions" : "\u003cb\u003eLjubljanska cesta\u003c/b\u003e turns \u003cb\u003eleft\u003c/b\u003e and becomes \u003cb\u003eKoroška cesta\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "qofyGwxrvASOIIGGGEE?I?OBOFuBlAWNm@\\OFw@ZyA\\q@JWD_@J"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2413724,
+                         "lng" : 14.3554816
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.8 km",
+                         "value" : 765
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 108
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2490257,
+                         "lng" : 14.3480904
+                      },
+                      "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit and stay on \u003cb\u003eKoroška cesta\u003c/b\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : 
+                      {
+                         "points" : "w`gyGwrrvA?A?A?A?A?AAA?A?AA??A?AA??AA??AA?A?AAA??@A?A?A@A??@A@?@A@?@?@?@A@?@?@@@?@?@?@@@?@@??@@??@@??@@?OTq@r@e@h@UXILm@z@}A`Cw@x@sD~FgAfBMBe@r@}@pAaB`CKNIHq@dAw@vAg@t@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.244122,
+                         "lng" : 14.3545245
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "1.9 km",
+                         "value" : 1899
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 132
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2628186,
+                         "lng" : 14.3338358
+                      },
+                      "html_instructions" : "Continue straight onto \u003cb\u003eKoroška cesta\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePodtabor- Kranj\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Podtabor- Kranj\u003c/div\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "m_hyGqjqvAuAvBADW`@a@l@EF]b@OPQVABc@j@g@p@EXeElGaApAo@t@MLg@d@ABmAhAa@b@sDbD}@z@a@f@[XqAjAkAhA{@r@CBYTg@^mAv@kBjAeCzAoBnAsAdAmBbByCjCURkAdAsChCu@t@{@fAi@t@I@A@mAhBq@jA_AfB"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2490257,
+                         "lng" : 14.3480904
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "3.7 km",
+                         "value" : 3662
+                      },
+                      "duration" : 
+                      {
+                         "text" : "4 mins",
+                         "value" : 263
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2801408,
+                         "lng" : 14.2944305
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003ePolica\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePolica- Podtabor\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "sujyGoqnvAk@pAA@c@lAiAxCEd@_AhDw@zCg@hByA|FQl@EN]|AGTGVENI^CJ{@dDKh@WdAMn@Ml@Id@GXIb@O~@SjAA?A?A?A?A?A@A?A@A??@A?A@A@?@A??@A@?@A@?@?@?@A@?@?@?@?@?@?@?@?@?@@@?@?@?@@@?@@@?@?@@@@@BBGd@CRSvAQtAQh@CVs@~ECTKx@EVaBpJUbAW`AYfAYx@Qf@_@dA]v@Wh@Wl@y@~Ay@|AoAbCu@xA]p@IPEHi@bAMXyApCaAfBw@zAS`@iC`FQXCDKTWd@wAlCGLWd@?@Wd@kA`CiC|EQZQVYh@U^{AnCGHm@lAm@nAQ\\Wf@CHQ\\]n@eAtBeAtBcB~CINgA|BO\\Q^EHABQd@O`@CHKV[|@CBCHUd@EHCPAAA?A?A?C?A@A?A@A?A@A@A@C@?@ABA@?@ABA@?B?BA@?B?D?B?@?B@B?@@B?B@@?BGTGd@Kj@k@lBIXGRYbAi@pBOp@I\\G^CVEf@ALIv@UpCIlAOfA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2628186,
+                         "lng" : 14.3338358
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "3.5 km",
+                         "value" : 3518
+                      },
+                      "duration" : 
+                      {
+                         "text" : "4 mins",
+                         "value" : 267
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.30024330000001,
+                         "lng" : 14.2734383
+                      },
+                      "html_instructions" : "At the roundabout, take the \u003cb\u003e2nd\u003c/b\u003e exit onto \u003cb\u003eNaklo\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePolica- Podtabor\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Polica- Podtabor\u003c/div\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : 
+                      {
+                         "points" : "{anyGe{fvAAAA?C?A?A?A?A?A@A?C@A@A@A@A@?@A@A@AB?BAB?@AB?B?@?B?B?@?B?B@@?B@B?@@@@B@@?@@@u@nBGN_@x@GNa@dAw@xAQ^[r@e@fAg@pAO`@qAvD[x@Yv@ELGLMXMRGHKLQR]ZQH[NYF[Bc@Bg@?c@AG?[AM?aAAs@?i@Bg@?q@Du@Fs@Nc@BSDYNWPONIDYPODKBK@OFe@J[D]FWHUFUROVQ\\S^QVk@r@o@h@UL]V]d@S^[f@CDUZA@Uf@ELCRENWbAEXQv@Of@Uf@OXKPGFWTKJIHMDSHwDp@WBYBM@I@GBIDEBKFSPONMHUNMHOHOD_@F{@Fq@F[BC?m@DYBQ@OCQCGACCEAA?CCEACCg@a@MMSSUOWKYIK?KAG?IAGAIA[C]GQCKCG?GCKEa@OCAk@YECMGQIOGQEKAC?C?E?G@E@C@EDCBADABABAD?DAF?H?H@JDHDJHHHHv@l@RNPPFHHJBFDHBHBJBNBP?@@NBP@^@N@XBp@?HFvBJtD@h@?b@?B@\\AH?HANENQ^g@Z[Rc@ZUPMHIDIDODMD]NKBQB{Bb@ODwAJe@FOBQFm@Tg@TKBOF_@TYPSLQPOPs@p@CFEHELCL?HEr@Aj@KzA?RAJ@L@D?FV~@Pv@H`@Pn@Jb@J^Px@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2801408,
+                         "lng" : 14.2944305
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "1.5 km",
+                         "value" : 1492
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 114
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.2990567,
+                         "lng" : 14.2620428
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003eLipnica- Podnart- Zvirče\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePodbrezje\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Lipnica- Podnart- Zvirče\u003c/div\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "o_ryG_xbvAZjBJ~@DVJx@L|@H|@LdAHr@Hd@FXL\\FNh@v@z@nAdAjBFJBBBDDFJFJBRF\\FLBPBVDTHRJJFDF^b@jAlATRX`@T\\FJDLBL@J?JARAXAHAHCXCXAT@T@JBRDPDNFJDFBD@@NLFDTLh@Vf@Zd@ZRPJJHJDDFFJVDR@H?N?H?J?JAJADAJAJAFAFCHCF?@ABADA@IPCBCBA@EBIDGDIFEJABCFAD?H?F@J@H@HBHBF?@BH@F@F@D?D?BAF?HEPCFCFGHKHWRKFIDu@V{@Tc@JK@c@HQD]DW@C@_@BQ@QB[DMBWDK@SB[DWBa@Be@?g@@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.30024330000001,
+                         "lng" : 14.2734383
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "5.1 km",
+                         "value" : 5128
+                      },
+                      "duration" : 
+                      {
+                         "text" : "6 mins",
+                         "value" : 331
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3276006,
+                         "lng" : 14.220716
+                      },
+                      "html_instructions" : "Continue onto \u003cb\u003eGobovce\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eGobovce- Črnivec\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinue to follow Gobovce- Črnivec\u003c/div\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "cxqyGwp`vAG@{@NgARg@Li@FWB_@?g@CE?]CO?SAk@AcB@a@?C?_AJC?c@J{@RIDOFKJMLABCBMVm@nAaAzBUf@s@zAgAhCqArCk@rA{@fBw@|AABUb@GLKXGVIVCJCNKf@EZKp@Kn@?DQrAOx@EVGV]xAOr@Ml@?@Kp@In@G`@E`@Gb@EVG`@K`@ADOf@Qj@ITITQl@a@hAi@nBGd@EVEZAZAZAr@@x@GvE?t@?h@CjA@n@@h@@^Dl@?^A\\?Z?@CZCXCRAPEZKb@ITMXOZSd@c@z@e@|@?@a@z@CD[r@OZA?GLGJONSVi@h@KL[Xa@d@e@j@_@h@y@dAuAxA[ZiCrBuAt@g@JI@]FE?[@k@AkBGq@?O?S?YBc@JgANe@DMBGBIDQLe@Z]TKDULUHIBM@G@O@G?GAG?G?GAC?C?QCGAE?E@E?C?G@GDKBQHYPKFUL_@TKFC@EBMHIHEFQXEJEDCJEJETg@jCWrA[pB]nCMz@E`@ETALA\\AH@J@TBPH\\Xz@Px@Hl@BXBd@?^?@?ZCT?BGZKZOVEHEFKJE@CBSHID_@NkC~@EDEDEDEHEFCFILWf@_@p@Uh@KZSn@KVGNy@vBQf@{@vByAbE_@bAe@vAELq@tBaAzDU`ASr@AD{@jDg@jCUh@i@jAGPUf@Wh@Wf@Yj@e@|@OXGJILSTYX?@UPIFs@Z_@Li@FWDiAIQE_@IYKKCWIa@KEA]Ia@MmBe@QE"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.2990567,
+                         "lng" : 14.2620428
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.3 km",
+                         "value" : 284
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 22
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3271786,
+                         "lng" : 14.2173299
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto the ramp to \u003cb\u003eJesenice\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eRadovljica\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eToll road\u003c/div\u003e",
+                      "maneuver" : "ramp-left",
+                      "polyline" : 
+                      {
+                         "points" : "ojwyGonxuAGf@IrAAH?RCX@X@RDRFZFNNVZf@RZJZH\\@DB^?T@TA`@Cj@Gv@?D?D@H"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3276006,
+                         "lng" : 14.220716
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "2.1 km",
+                         "value" : 2110
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 67
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3370503,
+                         "lng" : 14.1943421
+                      },
+                      "html_instructions" : "Merge onto \u003cb\u003eA2\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eE61\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eToll road\u003c/div\u003e",
+                      "maneuver" : "merge",
+                      "polyline" : 
+                      {
+                         "points" : "{gwyGiywuAIp@OvAg@tEIp@Ip@ShBCTCNCNCTCVEXg@fDKh@O|@U~AOt@Y~AA@O|@_@dBAFETMd@?BIZGV]|AMn@On@Ml@Mj@ABs@fCuAbFY`AIVsAbEKXQj@Qh@A@qAjDSh@Sj@e@nACBwAbDm@pAUf@yA`D}A|CWf@w@vACDINwB`Eg@|@aBxCq@jA_A`BORqEzHYf@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3271786,
+                         "lng" : 14.2173299
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.1 km",
+                         "value" : 103
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 5
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.337757,
+                         "lng" : 14.1934828
+                      },
+                      "html_instructions" : "Take exit \u003cb\u003e4\u003c/b\u003e toward \u003cb\u003eBegunje na Gorenjskem\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eZapuže\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eToll road\u003c/div\u003e",
+                      "maneuver" : "ramp-right",
+                      "polyline" : 
+                      {
+                         "points" : "qeyyGsisuAWPU^QVKPaAnA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3370503,
+                         "lng" : 14.1943421
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.2 km",
+                         "value" : 152
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 13
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3388724,
+                         "lng" : 14.1923815
+                      },
+                      "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e to continue toward \u003cb\u003ePočivališče Radovljica sever\u003c/b\u003e",
+                      "maneuver" : "keep-right",
+                      "polyline" : 
+                      {
+                         "points" : "_jyyGgdsuAQN_@`@[`@cAnAKJWXQLIBK?"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.337757,
+                         "lng" : 14.1934828
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "58 m",
+                         "value" : 58
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 21
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3392521,
+                         "lng" : 14.1918724
+                      },
+                      "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003ePočivališče Radovljica sever\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                      "maneuver" : "turn-slight-left",
+                      "polyline" : 
+                      {
+                         "points" : "}pyyGk}ruAkAdB"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3388724,
+                         "lng" : 14.1923815
+                      },
+                      "travel_mode" : "DRIVING"
+                   }
+                ],
+                "traffic_speed_entry" : [],
+                "via_waypoint" : []
+             },
+             {
+                "distance" : 
+                {
+                   "text" : "9.3 km",
+                   "value" : 9316
+                },
+                "duration" : 
+                {
+                   "text" : "16 mins",
+                   "value" : 968
+                },
+                "end_address" : "Cesta svobode 15, 4260 Bled, Slovenia",
+                "end_location" : 
+                {
+                   "lat" : 46.36809119999999,
+                   "lng" : 14.1090156
+                },
+                "start_address" : "Ljubljanska cesta 71, 4240 Radovljica, Slovenia",
+                "start_location" : 
+                {
+                   "lat" : 46.3392521,
+                   "lng" : 14.1918724
+                },
+                "steps" : 
+                [
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.3 km",
+                         "value" : 280
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 73
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3408981,
+                         "lng" : 14.1892541
+                      },
+                      "html_instructions" : "Head \u003cb\u003enorthwest\u003c/b\u003e on \u003cb\u003ePočivališče Radovljica sever\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eToll road\u003c/div\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "isyyGezruAoEtG@~@o@fAKPA??@A@{@vA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3392521,
+                         "lng" : 14.1918724
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "4.2 km",
+                         "value" : 4219
+                      },
+                      "duration" : 
+                      {
+                         "text" : "5 mins",
+                         "value" : 285
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3662922,
+                         "lng" : 14.157175
+                      },
+                      "html_instructions" : "Keep \u003cb\u003eright\u003c/b\u003e, follow signs for \u003cb\u003eRadovljica\u003c/b\u003e and merge onto \u003cb\u003eGorica\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLesce- Podtabor\u003c/b\u003e",
+                      "maneuver" : "keep-right",
+                      "polyline" : 
+                      {
+                         "points" : "s}yyGyiruAa@NSBUCQIQQMUWoAAU?O@S@OBKDMDMDIHKHIHEFEFCLAb@?ZAVPJJFJBHBJDZ?XAXClDGbBM|@CNGZERGXSj@O^Wl@Q\\[d@Y`@y@~@aA`A_@Z_@^gAfAu@z@QPKNkAhA?@sAnAwBxB{CxCqAtA{@~@oAtAaC`CE@C?EDCDEDGFIHIHSR{C|CIJo@n@aA~@cAdAQNIJaA~@oArA[\\iBnBKJqBpBiClCiCjCgBfBcEfEA?UVKBk@j@y@z@WVoBpBo@n@o@j@EFGFCDABABMPa@`@yIzI]^sArA_@^s@t@e@d@UTWXeBdBIHc@`@_Az@q@p@?@_@^]\\[\\URYZYXm@l@WVA@WVOPY^[b@OTKPg@z@Q^KRWl@KXSj@Md@[dAW|@Y|@CLK\\IXM`@Sr@AAAAA?A??AA?A?A?A?A?A?A@A?A??@A?A@?@A?A@?@A@?@A@?@A@?@?@A@?@?@?B?@?@?@?@?B?@@@?@?@@@?@?@@@?@@@@@@@@@k@rBOf@IV[fAm@tBYx@ENABaAnCOd@k@vBWbAYZc@h@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3408981,
+                         "lng" : 14.1892541
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "1.7 km",
+                         "value" : 1699
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 145
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3663449,
+                         "lng" : 14.138083
+                      },
+                      "html_instructions" : "At the roundabout, take the \u003cb\u003e3rd\u003c/b\u003e exit onto \u003cb\u003eLesce\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLesce- Bled\u003c/b\u003e heading to \u003cb\u003eBled\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eGo through 2 roundabouts\u003c/div\u003e",
+                      "maneuver" : "roundabout-right",
+                      "polyline" : 
+                      {
+                         "points" : "i|~yGialuACAC?EAC?C@C?C@C?C@A@A@C@A@ABA@C@ABCBCBABADCBADADCJANAL?F?D@NBLBJDJBDBB@BBBBBB@BBB@BBB@BBB?B@B?DAB?\\`@DDFJ^x@LLLRDLHT`@pAXx@Xz@j@`Bj@jBb@rA?@dA~CNZb@fA\\bA\\jARr@ThADZ@^A\\C\\CPAJG^ABMn@?@Oj@I`@ALOhAKx@GbBEhBEdAItBIhAEZIp@AHIl@Mf@?@Ol@Mf@Ot@GXGRYjAWdA[vA_@j@A?A?A@A?A@A??@A?A@?@A??@A@?@A@?@?@A@?@?@?@?@A@?@?B@@?@?@?@?@?@@?@`A[lA[zA]lBCTa@~Ba@rBYf@A??@A?A?A@A@A??@A??@A@A@?@?@A@?@AB?@?@?@?@?@?@?@?@?@?@?@@@?@?@@??@@\\?X?X"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3662922,
+                         "lng" : 14.157175
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "2.1 km",
+                         "value" : 2066
+                      },
+                      "duration" : 
+                      {
+                         "text" : "3 mins",
+                         "value" : 205
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3681939,
+                         "lng" : 14.1131047
+                      },
+                      "html_instructions" : "\u003cb\u003eLesce\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLesce- Bled\u003c/b\u003e turns slightly \u003cb\u003eright\u003c/b\u003e and becomes \u003cb\u003eLesce\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eLesce- Bled\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "s|~yG_jhuACPKn@ABOv@Of@Ul@CDUd@]j@}@nAm@|@Wf@O^Sl@St@GXIXKf@Kd@I|AElBBhAH`ANfBFr@Z~AJn@@HVzATtAJn@Lp@Jn@Jn@Lp@DXDTZbBPnA@NHx@Bl@@^?P@t@?DA\\AZKxAEp@AFIlACh@Cp@?bA?x@D`BBbA@p@Af@EbAGf@EXKr@Kl@Sr@Mj@St@Sn@g@tAs@hBm@jBSz@IZKj@?BOhAEr@Ex@A`A?x@@z@AVA@?@A??@?@A@?@?@?@?@?@?@?@?@@??@?@@??@@@?@@?@??@Fh@Ft@Dn@JlADXFV@BFh@BV@N@f@FrBH~A@Z@FBP"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3663449,
+                         "lng" : 14.138083
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.5 km",
+                         "value" : 528
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 66
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.37114709999999,
+                         "lng" : 14.1083628
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eBled- Gorje\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePrešernova cesta\u003c/b\u003e (signs for \u003cb\u003eSp. Gorje\u003c/b\u003e)",
+                      "maneuver" : "turn-right",
+                      "polyline" : 
+                      {
+                         "points" : "eh_zG{mcuAc@AY?I@s@?e@BG@E@QLC@CBADCHYfAUv@CJEP[~@aC`HGRi@`B[x@Oh@o@pBYz@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3681939,
+                         "lng" : 14.1131047
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.1 km",
+                         "value" : 126
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 29
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.371006,
+                         "lng" : 14.1067519
+                      },
+                      "html_instructions" : "Slight \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eCesta svobode\u003c/b\u003e",
+                      "maneuver" : "turn-slight-left",
+                      "polyline" : 
+                      {
+                         "points" : "uz_zGgpbuA?D?B?DAB?D?B?BAH?D?HARBhA@^D^TfB"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.37114709999999,
+                         "lng" : 14.1083628
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 398
+                      },
+                      "duration" : 
+                      {
+                         "text" : "3 mins",
+                         "value" : 165
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.36809119999999,
+                         "lng" : 14.1090156
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eCesta svobode\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the left\u003c/div\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "yy_zGefbuAHHD@FBD@B@@@B?J@H?H?f@Af@Ib@K\\QZSVa@Tg@j@iANWlBiD^m@HKHG\\If@@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.371006,
+                         "lng" : 14.1067519
+                      },
+                      "travel_mode" : "DRIVING"
+                   }
+                ],
+                "traffic_speed_entry" : [],
+                "via_waypoint" : []
+             },
+             {
+                "distance" : 
+                {
+                   "text" : "1.9 km",
+                   "value" : 1876
+                },
+                "duration" : 
+                {
+                   "text" : "7 mins",
+                   "value" : 414
+                },
+                "end_address" : "Grajska cesta 61, 4260 Bled, Slovenia",
+                "end_location" : 
+                {
+                   "lat" : 46.3703033,
+                   "lng" : 14.1008637
+                },
+                "start_address" : "Cesta svobode 15, 4260 Bled, Slovenia",
+                "start_location" : 
+                {
+                   "lat" : 46.36809119999999,
+                   "lng" : 14.1090156
+                },
+                "steps" : 
+                [
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.4 km",
+                         "value" : 398
+                      },
+                      "duration" : 
+                      {
+                         "text" : "3 mins",
+                         "value" : 178
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.371006,
+                         "lng" : 14.1067519
+                      },
+                      "html_instructions" : "Head \u003cb\u003enorth\u003c/b\u003e on \u003cb\u003eCesta svobode\u003c/b\u003e",
+                      "polyline" : 
+                      {
+                         "points" : "qg_zGktbuAg@A]HIFIJ_@l@mBhDOVk@hAUf@W`@[R]Pc@Jg@Hg@@I?I?KAC?AACAEAGCEAII"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.36809119999999,
+                         "lng" : 14.1090156
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.1 km",
+                         "value" : 95
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 32
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.37118460000001,
+                         "lng" : 14.1079598
+                      },
+                      "html_instructions" : "Continue straight to stay on \u003cb\u003eCesta svobode\u003c/b\u003e",
+                      "maneuver" : "straight",
+                      "polyline" : 
+                      {
+                         "points" : "yy_zGefbuAUgBE_@A_@CiA"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.371006,
+                         "lng" : 14.1067519
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "17 m",
+                         "value" : 17
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 8
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3712871,
+                         "lng" : 14.108121
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eCesta svobode\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "{z_zGwmbuAGG?AA?KU"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.37118460000001,
+                         "lng" : 14.1079598
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.8 km",
+                         "value" : 757
+                      },
+                      "duration" : 
+                      {
+                         "text" : "2 mins",
+                         "value" : 97
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3724967,
+                         "lng" : 14.1006531
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eBled- Gorje\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003ePrešernova cesta\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "q{_zGwnbuAELc@x@ADSb@KZEPA@Id@AFEXE^ATAR?LA`@ABC\\C^EVEPK`@Up@Ul@Ut@M`@GTELEJGJSPMBa@T]RA?oAf@UHODGFEDERCXC^Al@?\\?@BRDPDLDNDLNXJV@@LXDHBBDHRZZ`@RVN\\JPZj@T\\LVFN@F@H@J"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3712871,
+                         "lng" : 14.108121
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.2 km",
+                         "value" : 216
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 29
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3711133,
+                         "lng" : 14.0986945
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eGrajska cesta\u003c/b\u003e",
+                      "maneuver" : "turn-left",
+                      "polyline" : 
+                      {
+                         "points" : "cc`zGa`auAHFFDFF`@l@X`@bBvC@@V`@`@n@^t@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3724967,
+                         "lng" : 14.1006531
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "0.3 km",
+                         "value" : 337
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 54
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3707917,
+                         "lng" : 14.1008161
+                      },
+                      "html_instructions" : "Keep \u003cb\u003eleft\u003c/b\u003e to stay on \u003cb\u003eGrajska cesta\u003c/b\u003e",
+                      "maneuver" : "keep-left",
+                      "polyline" : 
+                      {
+                         "points" : "mz_zGys`uADBDBDJHN\\nABDBFBBBBB?D?DCFEBEDGHOFOFOH[No@Jo@DSD]?A@S?O?OEe@AIKo@EQK_@GQKMCEGAGAICKGEGEIAMG_@"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3711133,
+                         "lng" : 14.0986945
+                      },
+                      "travel_mode" : "DRIVING"
+                   },
+                   {
+                      "distance" : 
+                      {
+                         "text" : "56 m",
+                         "value" : 56
+                      },
+                      "duration" : 
+                      {
+                         "text" : "1 min",
+                         "value" : 16
+                      },
+                      "end_location" : 
+                      {
+                         "lat" : 46.3703033,
+                         "lng" : 14.1008637
+                      },
+                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e to stay on \u003cb\u003eGrajska cesta\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                      "maneuver" : "turn-right",
+                      "polyline" : 
+                      {
+                         "points" : "mx_zGcaauAR@B?D?@?D?B?@?BCDADAB?B?@?D?B?@?@?@@@?@?@?@?@A?A@?"
+                      },
+                      "start_location" : 
+                      {
+                         "lat" : 46.3707917,
+                         "lng" : 14.1008161
+                      },
+                      "travel_mode" : "DRIVING"
+                   }
+                ],
+                "traffic_speed_entry" : [],
+                "via_waypoint" : []
+             }
+          ],
+          "overview_polyline" : 
+          {
+             "points" : "}nbxGwcpwAaC{@UL_@nJt@jFbBdEf@xBgLxM_M~N{JzGoGhCyDnBaBbB_FfEsC~ByQtPqUbUgNhOw_@rU}NxK_HnHmTnR{YtVsH`I_ItLaSz\\kMjViEdIiCjC{N~LwDrFkCfHeCrGkBpC_JdHaVzNmUhLmThMgJfDiGhFkJ~GoCrHu@pGYhTa]rq@mG`JkIvH{ErC}AnB_B~DeFzQ{ApA}D`@eDIoE}@yGcAwCR_DfAsJ`Jy@La@bC_Up_@sKhQaNlY}CpCaCv@kNnEaAVaHdCiD~ByLjH}JrEoKxHcMpHop@n]yh@lXgJtBsFd@aOlFeNxFgYtJqGhD{EhEwKnFqKnD{SrMqS~GkJjCaf@|XcThMkR~HkCNoDc@s@Uq@oAcD}MaB_IoDuQ_BqGiAiDk@_BiBpCgBfF{AbEcHzMwNjOaLpEUbBe@Dh@IHo@Fo@lEaBjC}@lFmErKoMpAuBjAiAZh@VbABrB]tBoClF}GzL{EvNmEzJsEfAaCZ?GIGIByBQwNaECoD}A[kEbC{EjA_@DAIMIK^kD`FeRnXwGlKuDdF}HnLeC`CkPnOiQnLySfS}GbM_Nxg@iC|LSr@w@dH}EvYmF~MyTvb@qSd`@qQ|^cCpK}ClS[^Fp@wMr\\gBbC{Ef@yILqEbBoDv@oEfF}CvDeBvGuBlCgHpAwBzAeGj@kAQ{CoBaGqAwAe@g@TEz@dCbCz@vJJhImD|CaOjDmD|C]tFxDjTj@|EfA~BnDdF~Cz@dEfFNtGjCdBnB~BSlCgAjBN`C_C|A{E|@uMtAsNZyCnAmKxUqDdIcAzGaDrQ{ClKWfNYtOmG`MiIlJcHpEiAJsJTgDxAkDV}DlB}@jBuCbRx@nFLdEeArBaFzB}Ll[iGrVmEjJoB~BuCv@uCe@kG_BS`FjBtEE|EuDl[eFrWkMza@uKxUyLtTiKbPqEzEwAdBoEtG@~@{@xAA@_BhBmA[g@kCL}@fA_AbBZT|@m@bMeExHiJlJ}VbWu`@ha@}q@hr@eJbKwGdRg@^H`@cItXoBrAa@pB~@nAfBxBjElMlF|OH~FgAtGy@jPuApGqBtGQT@~AaEnQEhBkArFoFjKi@`CAvIzBvOlBfLPbGg@|KI~L}DfNsBjLEtE?RdA`JTjGBb@_@N}BDc@R_BpFiHnTCj@n@zGv@JpCi@tBgDfD{Ff@Qf@@g@Ag@Pi@x@_ErHuBrAcBJs@Ww@qGsA`DkBnLaBhDeEnBE`EbAbChEpHhI~Nn@c@`AoEc@eEcA}@Bu@P?^GZA"
+          },
+          "summary" : "Celovška cesta, Jeperca - Ljubljana/Šentvid and Labore",
+          "warnings" : [],
+          "waypoint_order" : 
+          [
+             0,
+             1,
+             2
+          ]
+       }
+    ],
+    "status" : "OK"
+ }
