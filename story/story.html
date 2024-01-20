@@ -117,65 +117,70 @@
                 padding-right: 10px;
             }
 
+            /* Customization of the paragraph text in footer */
+            .eighth-row p {
+                text-align: center;
+                font-size: 12px;
+            }
+
         </style>
 
         <script>
-            // Script to display day and overnight outdoor centres associated with the TDSB
+            // Display map of day and overnight outdoor centres associated with the TDSB
             function initMap() {
-            const tdsbmap = new google.maps.Map(document.getElementById("tdsbmap"), {
+            const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 12,
-                center: { lat: 34.84555, lng: -111.8035 },
-                },
-            );
+                center: { lat: 34.84555, lng: -111.8035 }
+            })}
 
-            // Setting the latitude and longitude for the day and overnight markers
+            // Latitude and longitude for the day outdoor education centres associated with TDSB
             const outdoorEdDay = [
                 [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
                 [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
                 [{ lat: 43.682380, lng: -79.334039 }, "Toronto Urban Studies Centre"],
-                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
-            ];
+                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"]
+            ]
 
+            // Latitude and longitude for the overnight outdoor education centres associated with TDSB
             const outdoorEdOvernight = [
                 [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
                 [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
                 [{ lat: 44.040105, lng: -80.081802 }, "Mono Cliffs Outdoor Education Centre"],
                 [{ lat: 45.535555, lng: -79.143270 }, "Scarborough Outdoor Education School"],
-                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
-            ];
+                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"]
+            ]
 
             // Info window for when you click on a pin, info about the centre pops up on the screen
-            const infoWindow = new google.maps.InfoWindow();
+            const infoWindow = new google.maps.InfoWindow()
 
-            // Creating the markers
-            outdoorEdDay.forEach(([position, title], i) => {
+           // Creating the markers for the day outdoor education centres
+           outdoorEdDay.forEach(([position, title], i) => {
                 const marker = new google.maps.Marker({
-                    position,
-                    tdsbmap,
-                    title: `${i + 1}. ${title}`,
-                    label: `${i + 1}`,
-                    optimized: false,
-                    color: orange,
-                });
-            
+                position,
+                map,
+                title: `${i + 1}. ${title}`,
+                label: `${i + 1}`,
+                optimized: false,
+                color: navy
+                })})
+
+            // Creating the markers for the overnight outdoor education centres
             outdoorEdOvernight.forEach(([position, title], i) => {
                 const marker = new google.maps.Marker({
-                    position,
-                    tdsbmap,
-                    title: `${i + 1}. ${title}`,
-                    label: `${i + 1}`,
-                    optimized: false,
-                    color: navy,
-                });
+                position,
+                map,
+                title: `${i + 1}. ${title}`,
+                label: `${i + 1}`,
+                optimized: false,
+                color: navy
+                })})
 
                 // Add a click listener for each marker, and set up the info window.
                 marker.addListener("click", () => {
-                infoWindow.close();
-                infoWindow.setContent(marker.getTitle());
-                infoWindow.open(marker.getMap(), marker);
-                });
-            });
-            }
+                infoWindow.close()
+                infoWindow.setContent(marker.getTitle())
+                infoWindow.open(marker.getMap(), marker)
+                })
 
         </script>
 
@@ -225,10 +230,9 @@
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="eighth-row">
-                <h3>This page was completed by Helen Plesko</h3>
+                <p>This page was completed by Helen Plesko</p>
                 <p>GEOM99 Lab 1 | Fleming College, Lindsay ON</p>
             </footer>
         </div>
     </body>
-
 </html>
