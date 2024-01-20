@@ -1,56 +1,122 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
     <head>
 
         <title>Helen's Google Map Story</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
         <style>
-        /* Always set the map height explicitly to define the size of the div element that contains the map. */
-            #map {
-            height: 100%;
-            }
-
-            /* Optional: Makes the sample page fill the window. */
-            html,
+            /* Customization of body */
             body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+                font-family: helvetica, arial, sans-serif;
+                background-color: white;
             }
+
+            /* Customization of body and document */
+            /* uses FlexBox https://www.w3schools.com/css/css3_flexbox.asp */
+            body, html {        
+                width: 100%; 
+                height: 100%; 
+                margin: 0; 
+                padding: 0
+            }  
+
+            /* Customization of container to hold all the rows with information */
+            .row-container {
+                display: flex; 
+                width: 100%; 
+                height: 100%; 
+                flex-direction: column; 
+                background-color: white; 
+                overflow: hidden;
+            }
+            
+            /* Customization of first row, with header information */
+            .first-row {
+                background-color: lightblue; 
+            }
+            
+            /* Customization of second row, with map */
+            .second-row {
+                flex-grow: 1; 
+                border: none; 
+                margin: 0; 
+                padding: 0;
+            }
+            
+            /* Customization of third row, with information */
+            .third-row {
+                flex-grow: 1; 
+                border: none; 
+                margin: 0; 
+                padding: 0;
+            }
+
+            /* Customization of header 1 */
+            h1 {
+                color: black;
+                text-align: center;
+                font-weight: bold;
+                font-size: 35px;
+                font-family: helvetica, arial, sans-serif;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            /* Customization of header 2 */
+            h2 {
+                color: black;
+                text-align: left;
+                font-weight: bold;
+                font-size: 30px;
+                font-family: helvetica, arial, sans-serif;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            /* Customization of header 3 */
+            h3 {
+                color: black;
+                text-align: left;
+                font-weight: bold;
+                font-size: 25px;
+                font-family: helvetica, arial, sans-serif;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            /* Customization of paragraph text */
+            p {
+                color: black;
+                text-align: left;
+                font-weight: normal;
+                font-size: 20px;
+                font-family: helvetica, arial, sans-serif;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
         </style>
-
-        <script>
-            let map;
-
-            function initMap() {
-                map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 46.3428, lng: 13.7990 },
-                zoom: 11,
-                });
-            }
-        </script>
 
     </head>
 
     <body>
+        <div class="row-container">
+            <header class="first-row">
+                <h1>Skating in Toronto, ON</h1>
+            </header>
 
-        Introduction
+            <h2>Introduction</h2>>
+            <p>hello</p>
 
-        Things to See
-        
-        Places to Eat
+            <h2>Outdoor Skating Rinks</h2>
+            <p></p>
 
-
-        <div id="map"></div>
-        
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
-        </script>
-
+            <h2>Hot Chocolate</h2>
+            <p></p>
+        </div>
     </body>
 
 </html>
