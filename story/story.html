@@ -6,6 +6,8 @@
 
         <title>Helen's Google Map Story</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" defer></script>
 
         <style>
             /* Customization of body */
@@ -35,26 +37,54 @@
             
             /* Customization of first row, with header information */
             .first-row {
-                background-color: lightblue; 
+                background-color: lightgreen; 
             }
             
             /* Customization of second row, with map */
             .second-row {
-                flex-grow: 1; 
-                border: none; 
-                margin: 0; 
-                padding: 0;
+                background-color: white; 
             }
-            
-            /* Customization of third row, with information */
+
+            /* Customization of third row, with map */
             .third-row {
                 flex-grow: 1; 
                 border: none; 
                 margin: 0; 
                 padding: 0;
             }
+            
+            /* Customization of fourth row, with information */
+            .fourth-row {
+                background-color: white; 
+            }
 
-            /* Customization of header 1 */
+            /* Customization of fifth row, with map */
+            .fifth-row {
+                flex-grow: 1; 
+                border: none; 
+                margin: 0; 
+                padding: 0;
+            }
+            
+            /* Customization of sixth row, with information */
+            .sixth-row {
+                background-color: white; 
+            }
+
+            /* Customization of seventh row, with map */
+            .seventh-row {
+                flex-grow: 1; 
+                border: none; 
+                margin: 0; 
+                padding: 0;
+            }
+
+            /* Customization of eighth row, with information */
+            .eighth-row {
+                background-color: lightgreen; 
+            }
+
+            /* Customization of the first header text */
             h1 {
                 color: black;
                 text-align: center;
@@ -65,19 +95,8 @@
                 padding-right: 10px;
             }
 
-            /* Customization of header 2 */
+            /* Customization of the second header text */
             h2 {
-                color: black;
-                text-align: left;
-                font-weight: bold;
-                font-size: 30px;
-                font-family: helvetica, arial, sans-serif;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-            /* Customization of header 3 */
-            h3 {
                 color: black;
                 text-align: left;
                 font-weight: bold;
@@ -87,12 +106,12 @@
                 padding-right: 10px;
             }
 
-            /* Customization of paragraph text */
+            /* Customization of the paragraph text */
             p {
                 color: black;
                 text-align: left;
                 font-weight: normal;
-                font-size: 20px;
+                font-size: 18px;
                 font-family: helvetica, arial, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
@@ -100,22 +119,115 @@
 
         </style>
 
+        <script>
+            // Script to display day and overnight outdoor centres associated with the TDSB
+            function initMap() {
+            const tdsbmap = new google.maps.Map(document.getElementById("tdsbmap"), {
+                zoom: 12,
+                center: { lat: 34.84555, lng: -111.8035 },
+                },
+            );
+
+            // Setting the latitude and longitude for the day and overnight markers
+            const outdoorEdDay = [
+                [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
+                [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
+                [{ lat: 43.682380, lng: -79.334039 }, "Toronto Urban Studies Centre"],
+                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
+            ];
+
+            const outdoorEdOvernight = [
+                [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
+                [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
+                [{ lat: 44.040105, lng: -80.081802 }, "Mono Cliffs Outdoor Education Centre"],
+                [{ lat: 45.535555, lng: -79.143270 }, "Scarborough Outdoor Education School"],
+                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
+            ];
+
+            // Info window for when you click on a pin, info about the centre pops up on the screen
+            const infoWindow = new google.maps.InfoWindow();
+
+            // Creating the markers
+            outdoorEdDay.forEach(([position, title], i) => {
+                const marker = new google.maps.Marker({
+                    position,
+                    tdsbmap,
+                    title: `${i + 1}. ${title}`,
+                    label: `${i + 1}`,
+                    optimized: false,
+                    color: orange,
+                });
+            
+            outdoorEdOvernight.forEach(([position, title], i) => {
+                const marker = new google.maps.Marker({
+                    position,
+                    tdsbmap,
+                    title: `${i + 1}. ${title}`,
+                    label: `${i + 1}`,
+                    optimized: false,
+                    color: navy,
+                });
+
+                // Add a click listener for each marker, and set up the info window.
+                marker.addListener("click", () => {
+                infoWindow.close();
+                infoWindow.setContent(marker.getTitle());
+                infoWindow.open(marker.getMap(), marker);
+                });
+            });
+            }
+
+        </script>
+
     </head>
 
     <body>
         <div class="row-container">
+
+            <!-- HTML page header -->
             <header class="first-row">
-                <h1>Skating in Toronto, ON</h1>
+                <h1>Outdoor Education in Toronto</h1>
             </header>
+            
+            <!-- Introduction text -->
+            <div class="second-row">
+                <h2></h2>>
+                <p>There are many benefits to outdoor education. 
+                </p>
+            </div>
+            
+            <!-- Map that refers to the intro text -->
+            <div class="third-row">
 
-            <h2>Introduction</h2>>
-            <p>hello</p>
+            </div>
 
-            <h2>Outdoor Skating Rinks</h2>
-            <p></p>
+            <!-- Outdoor education centres with the TDSB -->
+            <div class="fourth-row">
+                <h2>Outdoor Education with TDSB</h2>
+                <p>There are a handful of day and overnight centres associated with the Toronto District School Board.</p>
+            </div>
+            
+            <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
+            <div class="fifth-row">
+                <div id="tdsbmap"></div>
+            </div>
 
-            <h2>Hot Chocolate</h2>
-            <p></p>
+            <!-- Other outdoor education centres in the city -->
+            <div class="sixth-row">
+                <h2>Other Outdoor Education Centres</h2>
+                <p></p>
+            </div>
+
+            <!-- Map showing the outdoor education centres in the city -->
+            <div class="seventh row">
+
+            </div>
+
+            <!-- Footer mentioning disclaimer of the info on the page -->
+            <footer class="eighth-row">
+                <h3>This page was completed by Helen Plesko</h3>
+                <p>GEOM99 Lab 1 | Fleming College, Lindsay ON</p>
+            </footer>
         </div>
     </body>
 
