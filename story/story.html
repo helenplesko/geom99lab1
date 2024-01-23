@@ -129,6 +129,25 @@
                 font-weight: italic;
             }
 
+            /* inset map css */
+            #container, #map {
+                height: 100%;
+                width: 100%;
+            }
+
+            #map {
+                position: relative;
+            }
+
+            #overview {
+                position: absolute;
+                left: 40px;
+                height: 175px;
+                width: 175px;
+                bottom: 50px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            }
+
         </style>
 
         <script>
@@ -239,7 +258,10 @@
             </div>
             
             <!-- Map that refers to the intro text -->
-            <div class="third-row" id="map"></div>
+            <div class="third-row">
+                <div id="map"></div>
+                <div id="overview"></div>
+            </div>
 
             <!-- Outdoor education centres with the TDSB -->
             <div class="fourth-row">
