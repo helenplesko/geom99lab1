@@ -13,7 +13,7 @@ function initMap() {
     return new google.maps.Marker({
       position: location,
       label: labels[i % labels.length], 
-      styles: [{textColor: "white", textSize: 10, }]
+      styles: labels[{textColor: "white", textSize: 10, }]
     });
   });
   // Add a marker clusterer to manage the markers.
