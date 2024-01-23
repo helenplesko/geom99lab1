@@ -13,11 +13,10 @@ function initMap() {
       position: location,                     // Markers are located where the lat and long specifies.
       label: labels[i % labels.length],       // Markers are labeled with the alphabet.
       animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
-      mapTypeControlOptions: {
-        mapTypeIds: ["terrain"],
-      },
+      mapTypeControlOptions: {mapTypeIds: ["terrain"],},  // Add terrain map type
     });
   });
+  // Set map type to terrain
   map.setMapTypeId("terrain");
   // Add a marker clusterer to manage the markers.
   new MarkerClusterer(map, markers, {
