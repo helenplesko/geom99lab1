@@ -7,7 +7,8 @@ function initMap() {
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // Add markers to the map that represent locations of the Ontario Parks.
   // Note: The code uses the JavaScript Array.prototype.map() method to create an array of markers based on a given "locations" array.
-  // Animation code inspo: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
+  // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
+  // Map type code inspiration: https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple
   const markers = locations.map((location, i) => {
     return new google.maps.Marker({
       position: location,                     // Markers are located where the lat and long specifies.
