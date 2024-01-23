@@ -1,34 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <!-- Template for submission of SharkSpotters Google MyMaps activity 2022. 
-       Modify the SRC Url with the embed link and test this page to be sure it functions as expected. 
-       Submit this page's URL (not the embed url) when asked during your practical lab -->
-  <!-- The public URL of this on GitHub pages will be 
-       https://[username].github.io/pl1/mymaps/sharkspotters.html 
-       where [USERNAME] is replaced your github username -->
+
+<html lang="en">
+
   <head>
+
+    <!-- Title of webpage and meta details -->
+    <title>Shark Spotters MyMaps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
-      body {font-family: "Trebuchet MS","sans-serif";}    
-      body, html {width: 100%; height: 100%; margin: 0; padding: 0}  /* uses FlexBox https://www.w3schools.com/css/css3_flexbox.asp */
-      .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: white; overflow: hidden;}
-      .first-row {background-color: grey; }
-      .second-row {flex-grow: 1; border: none; margin: 0; padding: 0;}
-      h1 {margin: 2px;}
+
+      /* Setting font of body text */
+      body {
+        font-family: helvetica, arial, "sans-serif";
+      }    
+      
+      /* Setting body and document to have flex boxes */
+      /* Uses FlexBox from https://www.w3schools.com/css/css3_flexbox.asp */
+      body, html {
+        width: 100%; 
+        height: 100%; 
+        margin: 0; 
+        padding: 0;
+      }  
+
+      /* Customization of container holding text and sharkspotters map */
+      .row-container {
+        display: flex; 
+        width: 100%; 
+        height: 100%; 
+        flex-direction: column; 
+        background-color: white; 
+        overflow: hidden;
+      }
+
+      /* Customization of class for first flex box holding map title */
+      .first-row {
+        background-color: lightgrey; 
+      }
+
+      /* Customization of class for second flex box holding map */
+      .second-row {
+        flex-grow: 1; 
+        border: none; 
+        margin: 0; 
+        padding: 0;
+      }
+
+      /* Customization of first heading */
+      h1 {
+        margin: 10px;
+      }
+
     </style>
+
   </head>
+
 <body>
+
+  <!-- Class holding page info (title and Google MyMap)-->
   <div class="row-container">
+
+    <!-- Class holding map title -->
     <div class="first-row">
-      <h1>Sharkspotters MyMaps</h1>
+      <h1>Shark Spotters Google MyMaps</h1>
     </div>
-    <!-- 
-      *** TO DO ***
-      Modify the iframe src property to be your Shark Spotters embed link from the instructions (below)
-      https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/#embed-your-map-5-5
-      * Note: Be sure your shark spotters is shared with the public, or it won't be accessible to mark and you will not earn any marks. 
-      -->
-    <iframe class="second-row" id="GoogleMyMaps" src="https://www.google.com/maps/d/embed?mid=1zs3aWmWqjYMaNwd-UZkzNQ7Q7vXxOBk&ehbc=2E312F" title="Sharkspotters Map Using Google MyMaps">
+
+    <!-- Class holding Google MyMaps -->
+    <iframe class="second-row" id="GoogleMyMaps" src="https://www.google.com/maps/d/embed?mid=1zs3aWmWqjYMaNwd-UZkzNQ7Q7vXxOBk&ehbc=2E312F" title="Shark Spotters Google MyMaps by Helen Plesko">
     </iframe>
+
   </div>
+
 </body>
+
 </html>
