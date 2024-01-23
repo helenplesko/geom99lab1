@@ -12,11 +12,12 @@ function initMap() {
   const markers = locations.map((location, i) => {
     return new google.maps.Marker({
       position: location,
-      label: labels[i % labels.length],
+      label: labels[i % labels.length], 
+      styles: [{textColor: "white", textSize: 10, }]
     });
   });
   // Add a marker clusterer to manage the markers.
-  const markerClusterer = new MarkerClusterer(map, markers, {
+  new MarkerClusterer(map, markers, {
     imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     zoomOnClick: true,      // Map will zoom into cluster when cluster is clicked on since zoomOnClick is set to true.
     maxZoom: 11,            // Regular markers are always displayed at a maxZoom of 11.
