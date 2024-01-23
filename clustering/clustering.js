@@ -5,26 +5,28 @@ function initMap() {
   });
   // Create an array of alphabetical characters used to label the markers.
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // Add some markers to the map.
-  // Note: The code uses the JavaScript Array.prototype.map() method to
-  // create an array of markers based on a given "locations" array.
-  // The map() method here has nothing to do with the Google Maps API.
+  // Add markers to the map that represent locations of the Ontario Parks.
+  // Note: The code uses the JavaScript Array.prototype.map() method to create an array of markers based on a given "locations" array.
+  // Animation code inspo: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
   const markers = locations.map((location, i) => {
     return new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length], 
-      animation: google.maps.Animation.DROP,
+      position: location,                     // Markers are located where the lat and long specifies.
+      label: labels[i % labels.length],       // Markers are labeled with the alphabet.
+      animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
+      mapTypeControlOptions: {
+        mapTypeIds: ["terrain"],
+      },
     });
   });
   // Add a marker clusterer to manage the markers.
   new MarkerClusterer(map, markers, {
     imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    zoomOnClick: true,      // Map will zoom into cluster when cluster is clicked on since zoomOnClick is set to true.
-    maxZoom: 11,            // Regular markers are always displayed at a maxZoom of 11.
+    zoomOnClick: true,  // Map will zoom into cluster when cluster is clicked on since zoomOnClick is set to true.
+    maxZoom: 11,        // Regular markers are always displayed at a maxZoom of 11.
   });
 };
-// Using Excel, converted the two Lat and Long columns into the JavaScript list formatting.
-// Results saved in ontarioparkslist.csv
+// Using Excel, the two Lat and Long columns were converted into the JavaScript list formatting.
+// Results are saved in ontarioparkslist.csv
 const locations = [
   { lat: 49.758123, lng: -92.65349},
   { lat: 45.442046, lng: -78.820583},
