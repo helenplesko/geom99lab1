@@ -16,18 +16,11 @@ function initMap() {
     });
   });
   // Add a marker clusterer to manage the markers.
-  new MarkerClusterer(map, markers, {
+  const markerClusterer = new MarkerClusterer(map, markers, {
     imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     zoomOnClick: true,      // Map will zoom into cluster when cluster is clicked on since zoomOnClick is set to true.
     maxZoom: 11,            // Regular markers are always displayed at a maxZoom of 11.
-    minimumClusterSize: 3,  // Minimum of three markers in a cluster
   });
-  // Adding styling to the marker clusters.
-  const styles = MarkerClusterer.getStyles();
-  for (let i=0; i<styles.length; i++) {
-    styles[i].textColor = "white";    // The text in the marker cluster will be white.
-    styles[i].textSize = 12;          // The size of the marker cluster text will be 12.
-  }
 };
 // Using Excel, converted the two Lat and Long columns into the JavaScript list formatting.
 // Results saved in ontarioparkslist.csv
