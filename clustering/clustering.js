@@ -1,7 +1,7 @@
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
-    center: { lat: 49.538, lng: -85.903 }, 
+    zoom: 5,    // To show all of Ontario.
+    center: { lat: 49.538, lng: -85.903 },    // Estimated center of Ontario.
   });
   // Create an array of alphabetical characters used to label the markers.
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -16,14 +16,22 @@ function initMap() {
     });
   });
   // Add a marker clusterer to manage the markers.
+  // Map will zoom into cluster when cluster is clicked on since zoomOnClick is set to true.
+  // Regular markers are always displayed at a maxZoom of 11.
   new MarkerClusterer(map, markers, {
-    imagePath:
-      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     zoomOnClick: true,
     maxZoom: 11,
-    minZoom: 5,
   });
-}
+  // Change the styles of the marker clusterer.
+  const styles = MarkerClusterer.getStyles();
+  for (let i=0; i<styles.length; i++) {
+    styles[i].textColor = "white";
+    styles[i].textSize = 12;
+  }
+};
+// Using Excel, converted the two Lat and Long columns into the JavaScript list formatting.
+// Results saved in ontarioparkslist.csv
 const locations = [
   { lat: 49.758123, lng: -92.65349},
   { lat: 45.442046, lng: -78.820583},
