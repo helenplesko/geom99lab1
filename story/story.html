@@ -6,8 +6,13 @@
 
         <title>Helen's Google Map Story</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" defer></script>
+		
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>   
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+			defer>
+		</script>
 
         <style>
             /* Customization of body */
@@ -37,7 +42,7 @@
             
             /* Customization of first row, with header information */
             .first-row {
-                background-color: lightgreen; 
+                background-color: #c7e9c0; 
             }
             
             /* Customization of second row, with map */
@@ -81,7 +86,7 @@
 
             /* Customization of eighth row, with information */
             .eighth-row {
-                background-color: lightgreen; 
+                background-color: #c7e9c0; 
             }
 
             /* Customization of the first header text */
@@ -121,6 +126,7 @@
             .eighth-row p {
                 text-align: center;
                 font-size: 12px;
+                font-weight: italic;
             }
 
         </style>
@@ -196,7 +202,7 @@
             
             <!-- Introduction text -->
             <div class="second-row">
-                <h2></h2>>
+                <h2>Introduction</h2>
                 <p>There are many benefits to outdoor education. 
                 </p>
             </div>
