@@ -231,12 +231,16 @@
                 });
             });
 
-            // When the marker is clicked, the info window will pop up
+            // When the marker is hovered over, the info window will pop up
+            // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
             marker.addListener("click", () => {
+                if (activeInfoWindow != null) activeInfoWindow.close();
+                infoWindow.close();
                 infoWindow.open({
-                    anchor: edCenters,
+                    anchor: marker,
                     map: tdsbcenters,
                 });
+                activeInfoWindow = infoWindow;
             });
         };
 
