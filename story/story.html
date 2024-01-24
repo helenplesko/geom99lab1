@@ -131,7 +131,7 @@
 
 function initMap() {
     tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
-        zoom: 4,
+        zoom: 6,
         center: new google.maps.LatLng(44.89793, -79.33506),
     });
     const icons = {
@@ -141,7 +141,7 @@ function initMap() {
         },
         overnightOC: {
             name: "Overnight Outdoor Center",
-            icon: "https://img.icons8.com/plumpy/24/moon-satellite.png",
+            icon: "https://img.icons8.com/ios-glyphs/30/moon-symbol.png",
         },
     };
 
@@ -233,6 +233,7 @@ function initMap() {
             
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
             <div class="third-row" id="tdsbcenters"></div>
+            <div class="third-row" id="legend"><h3>Legend</h3></div>
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="eighth-row">
