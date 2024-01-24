@@ -148,6 +148,25 @@
                 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
             }
 
+        
+            /* legend css */
+            #legend {
+                font-family: Arial, sans-serif;
+                background: #fff;
+                padding: 10px;
+                margin: 10px;
+                border: 3px solid #000;
+            }
+
+            #legend h3 {
+                margin-top: 0;  
+            }
+
+            #legend img {
+                vertical-align: middle;
+            }
+
+            /* legend css end */
         </style>
 
         <script>
@@ -200,7 +219,6 @@
             /////// CODE FOR INSET MAP BEGIN ///////
 
             // Setting variables
-            let map, overview;
             const OVERVIEW_DIFFERENCE = 5;
             const OVERVIEW_MIN_ZOOM = 3;
             const OVERVIEW_MAX_ZOOM = 10;
@@ -209,7 +227,7 @@
             function initMap() {
                 const mapOptions = {
                     center: { lat: 43.72010, lng: -79.36021 },
-                    zoom: 7,
+                    zoom: 10,
                 };
 
                 // Create primary map, centered on Toronto
@@ -229,8 +247,112 @@
                 });
             };
 
-
             ////// CODE FOR INSET MAP END //////
+
+
+            ////// CODE FOR MAP W LEGEND BEGIN //////
+            // sample called: legend, https://googlemaps.github.io/js-samples/
+
+function initMap() {
+    tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
+        zoom: 10,
+        center: new google.maps.LatLng(43.72010, -79.36021),
+    });
+    const iconBase = "http://maps.google.com/mapfiles/kml/pal5/";
+    const icons = {
+        dayOC: {
+            name: "Day Outdoor Center",
+            icon: iconBase + "icon59l.png",
+        },
+        overnightOC: {
+            name: "Overnight Outdoor Center",
+            icon: iconBase + "icon37l.png",
+        },
+    };
+
+    const outdoorEdDay = [
+                [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
+                [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
+                [{ lat: 43.682380, lng: -79.334039 }, "Toronto Urban Studies Centre"],
+                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
+            ];
+
+            // Latitude, longitude, and title of the overnight outdoor education centres associated with TDSB
+            const outdoorEdOvernight = [
+                [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
+                [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
+                [{ lat: 44.040105, lng: -80.081802 }, "Mono Cliffs Outdoor Education Centre"],
+                [{ lat: 45.535555, lng: -79.143270 }, "Scarborough Outdoor Education School"],
+                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
+            ];
+
+    const features = [
+        {
+            position: new google.maps.LatLng(43.768095, -79.451559),
+            type: "dayOC",
+            title: "Forest Valley Outdoor Education Centre",
+        },
+        {
+            position: new google.maps.LatLng(43.827761, -79.179002),
+            type: "dayOC",
+            title: "Hillside Outdoor Education School",
+        },
+        {
+            position: new google.maps.LatLng(43.682380, -79.334039),
+            type: "dayOC",
+            title: "Toronto Urban Studies Centre",
+        },
+        {
+            position: new google.maps.LatLng(43.662738, -79.499399),
+            type: "dayOC",
+            title: "Warren Park Outdoor Education Centre",
+        },
+        {
+            position: new google.maps.LatLng(43.923146, -79.837005),
+            type: "overnightOC",
+            title: "Etobicoke Outdoor Education Centre",
+        },
+        {
+            position: new google.maps.LatLng(43.615503, -79.378789),
+            type: "overnightOC",
+            title: "Island Natural Science School",
+        },
+        {
+            position: new google.maps.LatLng(44.040105, -80.081802),
+            type: "overnightOC",
+            title: "Mono Cliffs Outdoor Education Centre",
+        },
+        {
+            position: new google.maps.LatLng(45.535555, -79.143270),
+            type: "overnightOC",
+            title: "Scarborough Outdoor Education School",
+        },
+        {
+            position: new google.maps.LatLng(44.081076, -79.981549),
+            type: "overnightOC",
+            title: "Sheldon Centre for Outdoor Education",
+        },
+    ];
+    features.forEach((feature) => {
+        new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: tdsbcenters,
+        });
+    });
+    const legend = document.getElementById("legend");
+    for (const key in icons) {
+        const type = icons[key];
+        const name = type.name;
+        const icon = type.icon;
+        const div = document.createElement("div");
+        div.innerHTML = '<img src="' + icon + '"> ' + name;
+        legend.appendChild(div);
+    }
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+};
+
+            ////// CODE FOR MAP W LEGEND END //////
 
         </script>
 
@@ -252,8 +374,8 @@
             </div>
             
             <!-- Map that refers to the intro text -->
-                <div class="third-row" id="map"></div>
-                <div class="third-row" id="overview"></div>
+            <div class="third-row" id="map"></div>
+            <div class="third-row" id="overview"></div>
 
             <!-- Outdoor education centres with the TDSB -->
             <div class="fourth-row">
@@ -262,7 +384,7 @@
             </div>
             
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
-            <div class="fifth-row" id="tdsbmap"></div>
+            <div class="fifth-row" id="tdsbcenters"></div>
 
             <!-- Other outdoor education centres in the city -->
             <div class="sixth-row">
