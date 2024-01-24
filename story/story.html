@@ -170,85 +170,6 @@
         </style>
 
         <script>
-            // Initiating map centered on Toronto, ON
-            function initMap() {
-            tdsbmap = new google.maps.Map(document.getElementById("tdsbmap"), {
-                zoom: 12,
-                center: { lat: 43.72010, lng: -79.36021 },
-            })};
-
-            // Latitude, longitude, and title of the day outdoor education centres associated with TDSB
-            const outdoorEdDay = [
-                [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
-                [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
-                [{ lat: 43.682380, lng: -79.334039 }, "Toronto Urban Studies Centre"],
-                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
-            ];
-
-            // Latitude, longitude, and title of the overnight outdoor education centres associated with TDSB
-            const outdoorEdOvernight = [
-                [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
-                [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
-                [{ lat: 44.040105, lng: -80.081802 }, "Mono Cliffs Outdoor Education Centre"],
-                [{ lat: 45.535555, lng: -79.143270 }, "Scarborough Outdoor Education School"],
-                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
-            ];
-
-            // Creating the markers for the day outdoor education centres
-            outdoorEdDay.forEach(([position, title], i) => {
-                const marker = new google.maps.Marker({
-                    position,
-                    tdsbmap,
-                    title: `${i + 1}. ${title}`,
-                    label: `${i + 1}`,
-                    optimized: false,
-                })
-            });
-
-            // Creating the markers for the overnight outdoor education centres
-            outdoorEdOvernight.forEach(([position, title], i) => {
-                const marker = new google.maps.Marker({
-                    position,
-                    tdsbmap,
-                    title: `${i + 1}. ${title}`,
-                    label: `${i + 1}`,
-                    optimized: false,
-                })
-            });
-
-            /////// CODE FOR INSET MAP BEGIN ///////
-
-            // Setting variables
-            const OVERVIEW_DIFFERENCE = 5;
-            const OVERVIEW_MIN_ZOOM = 3;
-            const OVERVIEW_MAX_ZOOM = 10;
-
-            // Initiating map centered on Toronto, ON
-            function initMap() {
-                const mapOptions = {
-                    center: { lat: 43.72010, lng: -79.36021 },
-                    zoom: 10,
-                };
-
-                // Create primary map, centered on Toronto
-                map = new google.maps.Map(document.getElementById("map"), Object.assign({}, mapOptions));
-
-                // Create overview/inset map of Ontario without controls
-                overview = new google.maps.Map(document.getElementById("overview"), Object.assign(Object.assign({}, mapOptions), { 
-                    disableDefaultUI: true, 
-                    gestureHandling: "none", 
-                    zoomControl: false }));
-                function clamp(num, min, max) {
-                    return Math.min(Math.max(num, min), max);
-                }
-                map.addListener("bounds_changed", () => {
-                    overview.setCenter(map.getCenter());
-                    overview.setZoom(clamp(map.getZoom() - OVERVIEW_DIFFERENCE, OVERVIEW_MIN_ZOOM, OVERVIEW_MAX_ZOOM));
-                });
-            };
-
-            ////// CODE FOR INSET MAP END //////
-
 
             ////// CODE FOR MAP W LEGEND BEGIN //////
             // sample called: legend, https://googlemaps.github.io/js-samples/
@@ -258,7 +179,7 @@ function initMap() {
         zoom: 10,
         center: new google.maps.LatLng(43.72010, -79.36021),
     });
-    const iconBase = "http://maps.google.com/mapfiles/kml/pal5/";
+    const iconBase = "https://maps.google.com/mapfiles/kml/pal5";
     const icons = {
         dayOC: {
             name: "Day Outdoor Center",
