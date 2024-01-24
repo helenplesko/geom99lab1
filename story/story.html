@@ -110,7 +110,7 @@
                 margin-top: 0;  
             }
 
-            /* Customization of image in legend */
+            /* Customization of image in legend to line up with the middle of the text */
             #legend img {
                 vertical-align: middle;
             }
@@ -233,7 +233,8 @@
 
             // When the marker is hovered over, the info window will pop up
             // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
-            marker.addListener("click", () => {
+            // Code inspiration: https://googlemaps.github.io/js-samples/
+            marker.addListener("mouseover", () => {
                 if (activeInfoWindow != null) activeInfoWindow.close();
                 infoWindow.close();
                 infoWindow.open({
@@ -261,7 +262,7 @@
             <div class="second-row">
                 <!-- Quick blurb about why outdoor education is important -->
                 <h2>Why is outdoor education important?</h2>
-                <p> A class trip an outdoor education center at any time of the year will surely be a highlight of the students' school year.
+                <p> A class trip to an outdoor education center at any time of the year will surely be a highlight of the students' school year.
                     Students will get to participate in activities that will help them build their confidence and teamwork skills.
                     It will also provide the students with a unique experience that simply can't be achieved in the classroom.
                 </p>
