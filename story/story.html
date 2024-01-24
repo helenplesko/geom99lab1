@@ -18,7 +18,7 @@
             /* Customization of body */
             body {
                 font-family: arial, helvetica, sans-serif;
-                background-color: white;
+                background-color: #f7fcf5;
             }
 
             /* Customization of body and document */
@@ -36,18 +36,18 @@
                 width: 100%; 
                 height: 100%; 
                 flex-direction: column; 
-                background-color: white; 
+                background-color: #fff; 
                 overflow: hidden;
             }
             
             /* Customization of first row, with header information */
             .first-row {
-                background-color: #c7e9c0; 
+                background-color: #e5f5e0; 
             }
             
             /* Customization of fourth row, with information */
             .second-row {
-                background-color: white; 
+                background-color: #f7fcf5; 
             }
 
             /* Customization of fifth row, with map */
@@ -58,16 +58,15 @@
                 padding: 0;
             }
 
-            /* Customization of eighth row, with information */
+            /* Customization of the footer */
             .eighth-row {
-                background-color: #c7e9c0; 
+                background-color: #e5f5e0; 
             }
 
             /* Customization of the first header text */
             h1 {
                 color: black;
                 text-align: center;
-                font-weight: bold;
                 font-size: 35px;
                 font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
@@ -76,10 +75,9 @@
 
             /* Customization of the second header text */
             h2 {
-                color: black;
+                color: #000;
                 text-align: left;
-                font-weight: bold;
-                font-size: 25px;
+                font-size: 21px;
                 font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
@@ -87,10 +85,10 @@
 
             /* Customization of the paragraph text */
             p {
-                color: black;
+                color: #000;
                 text-align: left;
                 font-weight: normal;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
@@ -100,7 +98,7 @@
             .eighth-row p {
                 text-align: center;
                 font-size: 12px;
-                font-weight: italic;
+                color: #000;
             }
         
             /* Customization of the TDSB outdoor education center map */
@@ -148,7 +146,7 @@
                 const icons = {
                     dayOC: {
                         name: "Day Outdoor Education Center",
-                        icon: "https://img.icons8.com/offices/30/sun.png",
+                        icon: "https://img.icons8.com/poly/30/experimental-sun-poly.png",
                     },
                     overnightOC: {
                         name: "Overnight Outdoor Education Center",
@@ -232,6 +230,8 @@
 
             ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
 
+
+
         </script>
 
     </head>
@@ -244,13 +244,18 @@
                 <h1>Outdoor Education</h1>
             </header>
 
-            <!-- Outdoor education centres with the TDSB -->
+            
             <div class="second-row">
+                <!-- Quick blurb about why outdoor education is important -->
+                <h2>Why is Outdoor Education Important?</h2>
+                <p> A class trip an outdoor education center at any time of the year will surely be a highlight of the students' school year.
+                    Students will get to participate in activities that will help them build their confidence and teamwork skills.
+                    It will also provide the students with a unique experience that simply can't be achieved in the classroom.
+                </p>
+
+                <!-- Quick blurb about outdoor education centres with the TDSB -->
                 <h2>Outdoor Education with the Toronto District School Board</h2>
                 <p> There are a handful of day and overnight outdoor education centres associated with the Toronto District School Board (TDSB). 
-                    A class trip to any of these sites will surely be a highlight of the students' school year.
-                    They will participate in activities that will help them build their confidence and teamwork skills.
-                    It will also provide the students with a unique experience that simply can't be achieved in the classroom.
                     See the map below to find out where the outdoor education centers are located.
                 </p>
             </div>
@@ -258,6 +263,13 @@
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
             <div id="tdsbcenters"></div>
             <div id="legend"><h3>Legend</h3></div>
+
+            <!-- Quick blurb about other outdoor education centers in and around the GTA -->
+            <h2>Other Outdoor Education Centers</h2>
+            <p> There are many more outdoor education centers offering school trips in and around the Greater Toronto Area.
+                This list is not complete, but it highlights some wellknown ones in the area.
+            </p>
+
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="eighth-row">
