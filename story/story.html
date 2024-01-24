@@ -197,7 +197,7 @@
                 // Display each outdoor education center on the map with their appropriate icons
                 // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
                 edCenters.forEach((edCenters) => {
-                    const marker = new google.maps.Marker({
+                    new google.maps.Marker({
                         position: edCenters.position,
                         icon: icons[edCenters.type].icon,
                         animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
@@ -229,20 +229,20 @@
                     content: edCenters.title,
                     map: tdsbcenters,
                 });
-            });
 
-            // When the marker is hovered over, the info window will pop up
-            // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
-            // Code inspiration: https://googlemaps.github.io/js-samples/
-            marker.addListener("mouseover", () => {
-                if (activeInfoWindow != null) activeInfoWindow.close();
-                infoWindow.close();
-                infoWindow.open({
-                    anchor: marker,
-                    map: tdsbcenters,
+                // When the marker is hovered over, the info window will pop up
+                // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
+                // Code inspiration: https://googlemaps.github.io/js-samples/
+                google.maps.event.addListener(marker, 'click', function() {
+                    if (activeInfoWindow != null) activeInfoWindow.close();
+                    infoWindow.close();
+                    infoWindow.open({
+                        anchor: marker,
+                        map: tdsbcenters,
+                    });
+                    activeInfoWindow = infoWindow;
                 });
-                activeInfoWindow = infoWindow;
-            });
+            });            
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
