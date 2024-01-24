@@ -39,7 +39,7 @@
             
             /* Customization of first row, with header information */
             .first-row {
-                background-color: #fff; 
+                background-color: #e5f5e0; 
             }
             
             /* Customization of second and third row, with info about outdoor education */
@@ -48,7 +48,7 @@
             }
 
             /* Customization of the footer */
-            .eighth-row {
+            .footer-text {
                 background-color: #e5f5e0; 
             }
 
@@ -219,12 +219,12 @@
 
             ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
 
-            
+
             ////// CODE TO ADD INFO WINDOW BEGIN //////
             
             // Create info window, which will include the title/name of the outdoor education center
             edCenters.forEach((edCenters) => {
-                const infowindow = new google.maps.InfoWindow({
+                const infoWindow = new google.maps.InfoWindow({
                     position: edCenters.position,
                     content: edCenters.title,
                     map: tdsbcenters,
@@ -233,8 +233,8 @@
 
             // When the marker is clicked, the info window will pop up
             marker.addListener("click", () => {
-                infowindow.open({
-                    anchor: marker,
+                infoWindow.open({
+                    anchor: edCenters,
                     map: tdsbcenters,
                 });
             });
