@@ -229,11 +229,10 @@
                     content: edCenters.title,
                     map: tdsbcenters,
                 });
+            });
 
-                // When the marker is hovered over, the info window will pop up
-                // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
-                // Code inspiration: https://googlemaps.github.io/js-samples/
-                google.maps.event.addListener(marker, 'click', function() {
+            edCenters.forEach((edCenters) => {
+                google.maps.event.addListener(edCenters, 'mouseover', function() {
                     if (activeInfoWindow != null) activeInfoWindow.close();
                     infoWindow.close();
                     infoWindow.open({
@@ -241,8 +240,20 @@
                         map: tdsbcenters,
                     });
                     activeInfoWindow = infoWindow;
-                });
-            });            
+                });           
+            });
+                // When the marker is hovered over, the info window will pop up
+                // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
+                // Code inspiration: https://googlemaps.github.io/js-samples/
+                //edCenters.addListener('mouseover', function() {
+                    //if (activeInfoWindow != null) activeInfoWindow.close();
+                    //infoWindow.close();
+                   // infoWindow.open({
+                    //    anchor: marker,
+                   //     map: tdsbcenters,
+                   // });
+                  //  activeInfoWindow = infoWindow;
+               // });           
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
