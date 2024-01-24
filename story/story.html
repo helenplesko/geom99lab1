@@ -21,16 +21,13 @@
                 background-color: #fff;
             }
 
-            /* Customization of body and document */
-            /* uses FlexBox https://www.w3schools.com/css/css3_flexbox.asp */
+            /* Customization of body and html document */
             body, html {        
-                width: 100%; 
-                height: 100%; 
                 margin: 0; 
                 padding: 0
             }  
 
-            /* Customization of container to hold all the rows with information 
+            /* Customization of container to hold all the rows with information */
             .row-container {
                 display: flex; 
                 width: 100%; 
@@ -38,17 +35,17 @@
                 flex-direction: column; 
                 background-color: #fff; 
                 overflow: hidden;
-            }*/
+            }
             
-            /* Customization of first row, with header information
+            /* Customization of first row, with header information */
             .first-row {
                 background-color: #fff; 
             }
             
-            /* Customization of second and third row, with info about outdoor education 
+            /* Customization of second and third row, with info about outdoor education */
             .second-row, .third-row {
                 background-color: #fff; 
-            }*/
+            }
 
             /* Customization of the footer */
             .eighth-row {
@@ -57,7 +54,7 @@
 
             /* Customization of the first header text */
             h1 {
-                color: black;
+                color: #000;
                 text-align: center;
                 font-size: 35px;
                 font-family: arial, helvetica, sans-serif;
@@ -87,7 +84,7 @@
             }
 
             /* Customization of the paragraph text in footer */
-            .eighth-row p {
+            .footer-text p {
                 text-align: center;
                 font-size: 12px;
                 color: #000;
@@ -95,7 +92,8 @@
         
             /* Customization of the TDSB outdoor education center map */
             #tdsbcenters {
-                height: 100%;
+                height: 400px;
+                width: 100%;
             }
 
             /* Customization of the legend */
@@ -199,7 +197,7 @@
                 // Display each outdoor education center on the map with their appropriate icons
                 // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
                 edCenters.forEach((edCenters) => {
-                    new google.maps.Marker({
+                    const marker = new google.maps.Marker({
                         position: edCenters.position,
                         icon: icons[edCenters.type].icon,
                         animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
@@ -218,11 +216,31 @@
                     div.innerHTML = '<img src="' + icon + '"> ' + name;
                     legend.appendChild(div);
                 }
-            };
 
             ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
 
+            
+            ////// CODE TO ADD INFO WINDOW BEGIN //////
+            
+            // Create info window, which will include the title/name of the outdoor education center
+            edCenters.forEach((edCenters) => {
+                const infowindow = new google.maps.InfoWindow({
+                    position: edCenters.position,
+                    content: edCenters.title,
+                    map: tdsbcenters,
+                });
+            });
 
+            // When the marker is clicked, the info window will pop up
+            marker.addListener("click", () => {
+                infowindow.open({
+                    anchor: marker,
+                    map: tdsbcenters,
+                });
+            });
+        };
+
+            ////// CODE TO ADD INFO WINDOW END //////
 
         </script>
 
@@ -236,8 +254,7 @@
                 <h1>Outdoor Education</h1>
             </header>
 
-            
-            <!-- <div class="second-row"> -->
+            <div class="second-row">
                 <!-- Quick blurb about why outdoor education is important -->
                 <h2>Why is outdoor education important?</h2>
                 <p> A class trip an outdoor education center at any time of the year will surely be a highlight of the students' school year.
@@ -250,23 +267,22 @@
                 <p> There are a handful of day and overnight outdoor education centres associated with the Toronto District School Board (TDSB). 
                     See the map below to find out where the outdoor education centers are located.
                 </p>
-            <!-- </div>-->
+            </div>
             
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
             <div id="tdsbcenters"></div>
             <div id="legend"><h3>Legend</h3></div>
 
-            <!-- <div class="third-row">-->
+            <div class="third-row">
             <!-- Quick blurb about other outdoor education centers in and around the GTA -->
                 <h2>Other Outdoor Education Centers</h2>
                 <p> There are many more outdoor education centers offering school trips in and around the Greater Toronto Area.
                     This list is not complete, but it highlights some wellknown ones in the area.
                 </p>
-            <!-- </div>-->
-
+            </div>
 
             <!-- Footer mentioning disclaimer of the info on the page -->
-            <footer class="eighth-row">
+            <footer class="footer-text">
                 <p>Page Completed by Helen Plesko</p>
                 <p>GEOM99 Lab 1 | Fleming College, Lindsay ON</p>
             </footer>
