@@ -129,24 +129,7 @@
                 font-weight: italic;
             }
 
-            /* inset map css */
-            #container, #map {
-                height: 100%;
-                width: 100%;
-            }
 
-            #map {
-                position: relative;
-            }
-
-            #overview {
-                position: absolute;
-                left: 40px;
-                height: 175px;
-                width: 175px;
-                bottom: 50px;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            }
 
         
             /* legend css */
@@ -179,33 +162,16 @@ function initMap() {
         zoom: 10,
         center: new google.maps.LatLng(43.72010, -79.36021),
     });
-    const iconBase = "https://maps.google.com/mapfiles/kml/pal5";
     const icons = {
         dayOC: {
             name: "Day Outdoor Center",
-            icon: iconBase + "icon59l.png",
+            icon: "https://img.icons8.com/color/48/sun--v1.png",
         },
         overnightOC: {
             name: "Overnight Outdoor Center",
-            icon: iconBase + "icon37l.png",
+            icon: "https://img.icons8.com/color/48/moon-satellite.png",
         },
     };
-
-    const outdoorEdDay = [
-                [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
-                [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
-                [{ lat: 43.682380, lng: -79.334039 }, "Toronto Urban Studies Centre"],
-                [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
-            ];
-
-            // Latitude, longitude, and title of the overnight outdoor education centres associated with TDSB
-            const outdoorEdOvernight = [
-                [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
-                [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
-                [{ lat: 44.040105, lng: -80.081802 }, "Mono Cliffs Outdoor Education Centre"],
-                [{ lat: 45.535555, lng: -79.143270 }, "Scarborough Outdoor Education School"],
-                [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
-            ];
 
     const features = [
         {
@@ -294,9 +260,9 @@ function initMap() {
                 </p>
             </div>
             
-            <!-- Map that refers to the intro text -->
+            <!-- Map that refers to the intro text 
             <div class="third-row" id="map"></div>
-            <div class="third-row" id="overview"></div>
+            <div class="third-row" id="overview"></div> -->
 
             <!-- Outdoor education centres with the TDSB -->
             <div class="fourth-row">
