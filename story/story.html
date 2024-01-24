@@ -4,7 +4,7 @@
 
     <head>
 
-        <title>Helen's Google Map Story</title>
+        <title>Google Map Story</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -17,7 +17,7 @@
         <style>
             /* Customization of body */
             body {
-                font-family: helvetica, arial, sans-serif;
+                font-family: arial, helvetica, sans-serif;
                 background-color: white;
             }
 
@@ -69,7 +69,7 @@
                 text-align: center;
                 font-weight: bold;
                 font-size: 35px;
-                font-family: helvetica, arial, sans-serif;
+                font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -80,7 +80,7 @@
                 text-align: left;
                 font-weight: bold;
                 font-size: 25px;
-                font-family: helvetica, arial, sans-serif;
+                font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -91,7 +91,7 @@
                 text-align: left;
                 font-weight: normal;
                 font-size: 18px;
-                font-family: helvetica, arial, sans-serif;
+                font-family: arial, helvetica, sans-serif;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -103,119 +103,134 @@
                 font-weight: italic;
             }
         
+            /* Customization of the TDSB outdoor education center map */
             #tdsbcenters {
                 height: 100%;
             }
 
-            /* legend css */
+            /* Customization of the legend */
             #legend {
-                font-family: helvetica, arial, sans-serif;
+                font-family: arial, helvetica, sans-serif;
                 background: #fff;
                 padding: 10px;
-                margin: 10px;
-                border: 2px solid #000;
+                margin: 5px;
+                border: 2px dotted #000;
             }
 
+            /* Customization of heading 3 in legend */
             #legend h3 {
                 margin-top: 0;  
             }
 
+            /* Customization of image in legend */
             #legend img {
                 vertical-align: middle;
             }
 
-            /* legend css end */
         </style>
 
         <script>
 
-            ////// CODE FOR MAP W ICONS BEGIN //////
-            // sample called: legend, https://googlemaps.github.io/js-samples/
-            // icons from: https://icons8.com/icons/
+            ////// CODE FOR MAP WITH ICONS AND LEGEND BEGIN //////
+            // JS template called legend, from https://googlemaps.github.io/js-samples/
 
-function initMap() {
-    tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
-        zoom: 7,
-        center: new google.maps.LatLng(44.89793, -79.33506),
-    });
-    const icons = {
-        dayOC: {
-            name: "Day Outdoor Center",
-            icon: "https://img.icons8.com/offices/30/sun.png",
-        },
-        overnightOC: {
-            name: "Overnight Outdoor Center",
-            icon: "https://img.icons8.com/ios-glyphs/30/moon-symbol.png",
-        },
-    };
+            // Load map centered on Toronto, ON, with a zoom of 7, displaying day and overnight outdoor education centers with TDSB
+            function initMap() {
+                tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
+                    zoom: 7,
+                    center: new google.maps.LatLng(44.89793, -79.33506),
+                });
 
-    const features = [
-        {
-            position: new google.maps.LatLng(43.768095, -79.451559),
-            type: "dayOC",
-            title: "Forest Valley Outdoor Education Centre",
-        },
-        {
-            position: new google.maps.LatLng(43.827761, -79.179002),
-            type: "dayOC",
-            title: "Hillside Outdoor Education School",
-        },
-        {
-            position: new google.maps.LatLng(43.682380, -79.334039),
-            type: "dayOC",
-            title: "Toronto Urban Studies Centre",
-        },
-        {
-            position: new google.maps.LatLng(43.662738, -79.499399),
-            type: "dayOC",
-            title: "Warren Park Outdoor Education Centre",
-        },
-        {
-            position: new google.maps.LatLng(43.923146, -79.837005),
-            type: "overnightOC",
-            title: "Etobicoke Outdoor Education Centre",
-        },
-        {
-            position: new google.maps.LatLng(43.615503, -79.378789),
-            type: "overnightOC",
-            title: "Island Natural Science School",
-        },
-        {
-            position: new google.maps.LatLng(44.040105, -80.081802),
-            type: "overnightOC",
-            title: "Mono Cliffs Outdoor Education Centre",
-        },
-        {
-            position: new google.maps.LatLng(45.535555, -79.143270),
-            type: "overnightOC",
-            title: "Scarborough Outdoor Education School",
-        },
-        {
-            position: new google.maps.LatLng(44.081076, -79.981549),
-            type: "overnightOC",
-            title: "Sheldon Centre for Outdoor Education",
-        },
-    ];
-    features.forEach((feature) => {
-        new google.maps.Marker({
-            position: feature.position,
-            icon: icons[feature.type].icon,
-            map: tdsbcenters,
-        });
-    });
-    const legend = document.getElementById("legend");
-    for (const key in icons) {
-        const type = icons[key];
-        const name = type.name;
-        const icon = type.icon;
-        const div = document.createElement("div");
-        div.innerHTML = '<img src="' + icon + '"> ' + name;
-        legend.appendChild(div);
-    }
-    //map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-};
+                // Set icon images and names
+                // Icons from: https://icons8.com/icons/
+                    // Icons will appear on map and in the legend
+                    // Names will appear in the legend
+                const icons = {
+                    dayOC: {
+                        name: "Day Outdoor Education Center",
+                        icon: "https://img.icons8.com/offices/30/sun.png",
+                    },
+                    overnightOC: {
+                        name: "Overnight Outdoor Education Center",
+                        icon: "https://img.icons8.com/ios-glyphs/30/moon-symbol.png",
+                    },
+                };
+                
+                // Set location and type of the outdoor education centers
+                // Information about the outdoor ed centers retrived from: https://schoolweb.tdsb.on.ca/toes/ 
+                const edCenters = [
+                    {
+                        position: new google.maps.LatLng(43.768095, -79.451559),
+                        type: "dayOC",
+                        title: "Forest Valley Outdoor Education Centre",
+                    },
+                    {
+                        position: new google.maps.LatLng(43.827761, -79.179002),
+                        type: "dayOC",
+                        title: "Hillside Outdoor Education School",
+                    },
+                    {
+                        position: new google.maps.LatLng(43.682380, -79.334039),
+                        type: "dayOC",
+                        title: "Toronto Urban Studies Centre",
+                    },
+                    {
+                        position: new google.maps.LatLng(43.662738, -79.499399),
+                        type: "dayOC",
+                        title: "Warren Park Outdoor Education Centre",
+                    },
+                    {
+                        position: new google.maps.LatLng(43.923146, -79.837005),
+                        type: "overnightOC",
+                        title: "Etobicoke Outdoor Education Centre",
+                    },
+                    {
+                        position: new google.maps.LatLng(43.615503, -79.378789),
+                        type: "overnightOC",
+                        title: "Island Natural Science School",
+                    },
+                    {
+                        position: new google.maps.LatLng(44.040105, -80.081802),
+                        type: "overnightOC",
+                        title: "Mono Cliffs Outdoor Education Centre",
+                    },
+                    {
+                        position: new google.maps.LatLng(45.535555, -79.143270),
+                        type: "overnightOC",
+                        title: "Scarborough Outdoor Education School",
+                    },
+                    {
+                        position: new google.maps.LatLng(44.081076, -79.981549),
+                        type: "overnightOC",
+                        title: "Sheldon Centre for Outdoor Education",
+                    },
+                ];
 
-            ////// CODE FOR MAP WITH ICONS END //////
+                // Display each outdoor education center on the map with their appropriate icons
+                // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
+                edCenters.forEach((edCenters) => {
+                    new google.maps.Marker({
+                        position: edCenters.position,
+                        icon: icons[edCenters.type].icon,
+                        animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
+                        map: tdsbcenters,
+                    });
+                });
+
+                // Display legend with icon and center type
+                    // Not sure why it is not appearing directly on the map... it is under the map instead
+                const legend = document.getElementById("legend");
+                for (const key in icons) {
+                    const type = icons[key];
+                    const name = type.name;
+                    const icon = type.icon;
+                    const div = document.createElement("div");
+                    div.innerHTML = '<img src="' + icon + '"> ' + name;
+                    legend.appendChild(div);
+                }
+            };
+
+            ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
 
         </script>
 
@@ -226,13 +241,18 @@ function initMap() {
 
             <!-- HTML page header -->
             <header class="first-row">
-                <h1>Outdoor Education in Toronto</h1>
+                <h1>Outdoor Education</h1>
             </header>
 
             <!-- Outdoor education centres with the TDSB -->
             <div class="second-row">
-                <h2>Outdoor Education with TDSB</h2>
-                <p>There are a handful of day and overnight centres associated with the Toronto District School Board.</p>
+                <h2>Outdoor Education with the Toronto District School Board</h2>
+                <p> There are a handful of day and overnight outdoor education centres associated with the Toronto District School Board (TDSB). 
+                    A class trip to any of these sites will surely be a highlight of the students' school year.
+                    They will participate in activities that will help them build their confidence and teamwork skills.
+                    It will also provide the students with a unique experience that simply can't be achieved in the classroom.
+                    See the map below to find out where the outdoor education centers are located.
+                </p>
             </div>
             
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
@@ -241,7 +261,7 @@ function initMap() {
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="eighth-row">
-                <p>This page was completed by Helen Plesko</p>
+                <p>Page Completed by Helen Plesko</p>
                 <p>GEOM99 Lab 1 | Fleming College, Lindsay ON</p>
             </footer>
         </div>
