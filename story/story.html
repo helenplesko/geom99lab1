@@ -151,14 +151,14 @@
         </style>
 
         <script>
-            // Display map of day and overnight outdoor centres associated with the TDSB
+            // Initiating map centered on Toronto, ON
             function initMap() {
-            const tdsbmap = new google.maps.Map(document.getElementById("tdsbmap"), {
+            tdsbmap = new google.maps.Map(document.getElementById("tdsbmap"), {
                 zoom: 12,
-                center: { lat: 34.84555, lng: -111.8035 },
+                center: { lat: 43.72010, lng: -79.36021 },
             })};
 
-            // Latitude and longitude for the day outdoor education centres associated with TDSB
+            // Latitude, longitude, and title of the day outdoor education centres associated with TDSB
             const outdoorEdDay = [
                 [{ lat: 43.768095, lng: -79.451559 }, "Forest Valley Outdoor Education Centre"],
                 [{ lat: 43.827761, lng: -79.179002 }, "Hillside Outdoor Education School"],
@@ -166,7 +166,7 @@
                 [{ lat: 43.662738, lng: -79.499399 }, "Warren Park Outdoor Education Centre"],
             ];
 
-            // Latitude and longitude for the overnight outdoor education centres associated with TDSB
+            // Latitude, longitude, and title of the overnight outdoor education centres associated with TDSB
             const outdoorEdOvernight = [
                 [{ lat: 43.923146, lng: -79.837005 }, "Etobicoke Outdoor Education Centre"],
                 [{ lat: 43.615503, lng: -79.378789 }, "Island Natural Science School"],
@@ -175,53 +175,47 @@
                 [{ lat: 44.081076, lng: -79.981549 }, "Sheldon Centre for Outdoor Education"],
             ];
 
-            // Info window for when you click on a pin, info about the centre pops up on the screen
-            const infoWindow = new google.maps.InfoWindow();
-
             // Creating the markers for the day outdoor education centres
             outdoorEdDay.forEach(([position, title], i) => {
                 const marker = new google.maps.Marker({
-                position,
-                tdsbmap,
-                title: `${i + 1}. ${title}`,
-                label: `${i + 1}`,
-                optimized: false,
-                color: navy,
-                })});
+                    position,
+                    tdsbmap,
+                    title: `${i + 1}. ${title}`,
+                    label: `${i + 1}`,
+                    optimized: false,
+                })
+            });
 
             // Creating the markers for the overnight outdoor education centres
             outdoorEdOvernight.forEach(([position, title], i) => {
                 const marker = new google.maps.Marker({
-                position,
-                tdsbmap,
-                title: `${i + 1}. ${title}`,
-                label: `${i + 1}`,
-                optimized: false,
-                color: navy,
-                })});
-
-            // Add a click listener for each marker, and set up the info window.
-            marker.addListener("click", () => {
-            infoWindow.close()
-            infoWindow.setContent(marker.getTitle())
-            infoWindow.open(marker.getMap(), marker)
+                    position,
+                    tdsbmap,
+                    title: `${i + 1}. ${title}`,
+                    label: `${i + 1}`,
+                    optimized: false,
+                })
             });
-
 
             /////// CODE FOR INSET MAP BEGIN ///////
 
+            // Setting variables
             let map, overview;
             const OVERVIEW_DIFFERENCE = 5;
             const OVERVIEW_MIN_ZOOM = 3;
             const OVERVIEW_MAX_ZOOM = 10;
+
+            // Initiating map centered on Toronto, ON
             function initMap() {
                 const mapOptions = {
-                    center: { lat: 50, lng: 8 },
+                    center: { lat: 43.72010, lng: -79.36021 },
                     zoom: 7,
                 };
-                // instantiate the primary map
+
+                // Create primary map, centered on Toronto
                 map = new google.maps.Map(document.getElementById("map"), Object.assign({}, mapOptions));
-                // instantiate the overview map without controls
+
+                // Create overview/inset map of Ontario without controls
                 overview = new google.maps.Map(document.getElementById("overview"), Object.assign(Object.assign({}, mapOptions), { 
                     disableDefaultUI: true, 
                     gestureHandling: "none", 
