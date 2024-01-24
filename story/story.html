@@ -127,20 +127,21 @@
 
             ////// CODE FOR MAP W ICONS BEGIN //////
             // sample called: legend, https://googlemaps.github.io/js-samples/
+            // icons from: https://icons8.com/icons/
 
 function initMap() {
     tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
-        zoom: 10,
+        zoom: 4,
         center: new google.maps.LatLng(44.89793, -79.33506),
     });
     const icons = {
         dayOC: {
             name: "Day Outdoor Center",
-            icon: "https://img.icons8.com/color/48/sun--v1.png",
+            icon: "https://img.icons8.com/offices/30/sun.png",
         },
         overnightOC: {
             name: "Overnight Outdoor Center",
-            icon: "https://img.icons8.com/color/48/moon-satellite.png",
+            icon: "https://img.icons8.com/plumpy/24/moon-satellite.png",
         },
     };
 
