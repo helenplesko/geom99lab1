@@ -45,39 +45,13 @@
                 background-color: #c7e9c0; 
             }
             
-            /* Customization of second row, with map */
+            /* Customization of fourth row, with information */
             .second-row {
                 background-color: white; 
             }
 
-            /* Customization of third row, with map */
-            .third-row {
-                flex-grow: 1; 
-                border: none; 
-                margin: 0; 
-                padding: 0;
-            }
-            
-            /* Customization of fourth row, with information */
-            .fourth-row {
-                background-color: white; 
-            }
-
             /* Customization of fifth row, with map */
-            .fifth-row {
-                flex-grow: 1; 
-                border: none; 
-                margin: 0; 
-                padding: 0;
-            }
-            
-            /* Customization of sixth row, with information */
-            .sixth-row {
-                background-color: white; 
-            }
-
-            /* Customization of seventh row, with map */
-            .seventh-row {
+            .third-row {
                 flex-grow: 1; 
                 border: none; 
                 margin: 0; 
@@ -128,17 +102,14 @@
                 font-size: 12px;
                 font-weight: italic;
             }
-
-
-
         
             /* legend css */
             #legend {
-                font-family: Arial, sans-serif;
+                font-family: helvetica, arial, sans-serif;
                 background: #fff;
                 padding: 10px;
                 margin: 10px;
-                border: 3px solid #000;
+                border: 2px solid #000;
             }
 
             #legend h3 {
@@ -154,13 +125,13 @@
 
         <script>
 
-            ////// CODE FOR MAP W LEGEND BEGIN //////
+            ////// CODE FOR MAP W ICONS BEGIN //////
             // sample called: legend, https://googlemaps.github.io/js-samples/
 
 function initMap() {
     tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
         zoom: 10,
-        center: new google.maps.LatLng(43.72010, -79.36021),
+        center: new google.maps.LatLng(44.89793, -79.33506),
     });
     const icons = {
         dayOC: {
@@ -239,7 +210,7 @@ function initMap() {
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 };
 
-            ////// CODE FOR MAP W LEGEND END //////
+            ////// CODE FOR MAP WITH ICONS END //////
 
         </script>
 
@@ -252,37 +223,15 @@ function initMap() {
             <header class="first-row">
                 <h1>Outdoor Education in Toronto</h1>
             </header>
-            
-            <!-- Introduction text -->
-            <div class="second-row">
-                <h2>Introduction</h2>
-                <p>There are many benefits to outdoor education. 
-                </p>
-            </div>
-            
-            <!-- Map that refers to the intro text 
-            <div class="third-row" id="map"></div>
-            <div class="third-row" id="overview"></div> -->
 
             <!-- Outdoor education centres with the TDSB -->
-            <div class="fourth-row">
+            <div class="second-row">
                 <h2>Outdoor Education with TDSB</h2>
                 <p>There are a handful of day and overnight centres associated with the Toronto District School Board.</p>
             </div>
             
             <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
-            <div class="fifth-row" id="tdsbcenters"></div>
-
-            <!-- Other outdoor education centres in the city -->
-            <div class="sixth-row">
-                <h2>Other Outdoor Education Centres</h2>
-                <p></p>
-            </div>
-
-            <!-- Map showing the outdoor education centres in the city -->
-            <div class="seventh row">
-
-            </div>
+            <div class="third-row" id="tdsbcenters"></div>
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="eighth-row">
