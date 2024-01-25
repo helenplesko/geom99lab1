@@ -237,23 +237,13 @@
                     },
                 ];
 
-                //TESTINGGGG
-                edCenters.forEach((edCenters) => {
-                const infoWindow = new google.maps.InfoWindow({
-                    position: edCenters.position,
-                    content: edCenters.title,
-                    map: tdsbcenters,
-                });
-            });
-
-
-
                 // Display each outdoor education center on the map with their appropriate icons
                 // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
                 edCenters.forEach((edCenters) => {
                     const marker = new google.maps.Marker({
                         position: edCenters.position,
                         icon: icons[edCenters.type].icon,
+                        title: edCenters.title,
                         animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
                         map: tdsbcenters,
                     });
@@ -272,6 +262,22 @@
                 }
 
             ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
+
+
+            ////// CODE TO ADD INFO WINDOW BEGIN //////
+            // Tried to follow similar format to the markers above
+            
+            // Create info window, which will include the title/name of the outdoor education center
+            edCenters.forEach((edCenters) => {
+                const infoWindow = new google.maps.InfoWindow({
+                    position: edCenters.position,
+                    content: edCenters.title,
+                    map: tdsbcenters,
+                });
+            });
+            
+            // Tried to make the info windows open on click, but didn't have luck...
+            // At the moment they just stay open, and don't reopen when you manually close it
             edCenters.forEach((edCenters) => {
                 marker.addListener('click', () => {
                     infoWindow.open({
@@ -279,37 +285,11 @@
                         map: tdsbcenters,
                     });
                 });           
-            }); 
-
-            ////// CODE TO ADD INFO WINDOW BEGIN //////
-
-
-            
-            // Tried to follow similar format to the markers above
-            
-            // Create info window, which will include the title/name of the outdoor education center
-       //     edCenters.forEach((edCenters) => {
-         //       const infoWindow = new google.maps.InfoWindow({
-           //         position: edCenters.position,
-             //       content: edCenters.title,
-               //     map: tdsbcenters,
-      //          });
-     //       });
-            
-    //        // Tried to make the info windows open on click, but didn't have luck...
-    //        // At the moment they just stay open, and don't reopen when you manually close it
-    //        edCenters.forEach((edCenters) => {
-    //            marker.addListener('click', () => {
-    //                infoWindow.open({
-    //                    anchor: edCenters,
-    //                    map: tdsbcenters,
-    //                });
-    //            });           
-    //        });                  
+            });                  
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
-
+            window.initMap = initMap;
         </script>
 
     </head>
