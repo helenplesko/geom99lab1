@@ -115,6 +115,41 @@
                 vertical-align: middle;
             }
 
+            /******** CSS FOR TABLE BEGIN ********/
+            #centerList th .dayTableTitle {
+                background-color: #fec44f;
+            }
+
+            #centerList td .dayCenter {
+                background-color: #fff7bc;
+            }
+
+            #centerList th .overnightTableTitle {
+                background-color: #9ecae1;
+            }
+
+            #centerList td .overnightCenter {
+                background-color: #deebf7;
+            }
+
+            #centerList td {
+                border: 1px;
+                padding: 10px;
+                border-radius: 15px;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            /* Customization of table headings */
+            #flemingcourses th {
+                padding: 14px;
+                color: white;
+                border-radius: 15px;
+                font-size: 17px;
+            }
+
+            /******** CSS FOR TABLE END ********/
+
         </style>
 
         <script>
@@ -150,7 +185,7 @@
                     {
                         position: new google.maps.LatLng(43.768095, -79.451559),
                         type: "dayOC",
-                        title: "Forest Valley Outdoor Education Centre",
+                        title: "Forest Valley Outdoor Education Center",
                     },
                     {
                         position: new google.maps.LatLng(43.827761, -79.179002),
@@ -160,17 +195,17 @@
                     {
                         position: new google.maps.LatLng(43.682380, -79.334039),
                         type: "dayOC",
-                        title: "Toronto Urban Studies Centre",
+                        title: "Toronto Urban Studies Center",
                     },
                     {
                         position: new google.maps.LatLng(43.662738, -79.499399),
                         type: "dayOC",
-                        title: "Warren Park Outdoor Education Centre",
+                        title: "Warren Park Outdoor Education Center",
                     },
                     {
                         position: new google.maps.LatLng(43.923146, -79.837005),
                         type: "overnightOC",
-                        title: "Etobicoke Outdoor Education Centre",
+                        title: "Etobicoke Outdoor Education Center",
                     },
                     {
                         position: new google.maps.LatLng(43.615503, -79.378789),
@@ -180,7 +215,7 @@
                     {
                         position: new google.maps.LatLng(44.040105, -80.081802),
                         type: "overnightOC",
-                        title: "Mono Cliffs Outdoor Education Centre",
+                        title: "Mono Cliffs Outdoor Education Center",
                     },
                     {
                         position: new google.maps.LatLng(45.535555, -79.143270),
@@ -190,7 +225,7 @@
                     {
                         position: new google.maps.LatLng(44.081076, -79.981549),
                         type: "overnightOC",
-                        title: "Sheldon Centre for Outdoor Education",
+                        title: "Sheldon Center for Outdoor Education",
                     },
                 ];
 
@@ -241,19 +276,7 @@
                     });
                     activeInfoWindow = infoWindow;
                 });           
-            });
-                // When the marker is hovered over, the info window will pop up
-                // Code inspiration: https://itpscan.ca/blog/google_maps/maps_02/index.php
-                // Code inspiration: https://googlemaps.github.io/js-samples/
-                //edCenters.addListener('mouseover', function() {
-                    //if (activeInfoWindow != null) activeInfoWindow.close();
-                    //infoWindow.close();
-                   // infoWindow.open({
-                    //    anchor: marker,
-                   //     map: tdsbcenters,
-                   // });
-                  //  activeInfoWindow = infoWindow;
-               // });           
+            });           
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
@@ -278,16 +301,43 @@
                     It will also provide the students with a unique experience that simply can't be achieved in the classroom.
                 </p>
 
-                <!-- Quick blurb about outdoor education centres with the TDSB -->
+                <!-- Quick blurb about outdoor education centers with the TDSB -->
                 <h2>Learning outdoors with the Toronto District School Board</h2>
-                <p> There are a handful of day and overnight outdoor education centres associated with the Toronto District School Board (TDSB). 
+                <p> There are a handful of day and overnight outdoor education centers associated with the Toronto District School Board (TDSB). 
                     See the map below to find out where the outdoor education centers are located.
                 </p>
             </div>
             
-            <!-- Map of the day and overnight outdoor education centres associated with TDSB -->
+            <!-- Map of the day and overnight outdoor education centers associated with TDSB -->
             <div id="tdsbcenters"></div>
             <div id="legend"><h3>Legend</h3></div>
+
+            <table id="centerList">
+                <tr> <!-- Column Headings -->
+                    <th class="dayTableTitle">DAY</th>
+                    <th class="overnightTableTitle">OVERNIGHT</th>
+                </tr>
+                <tr> <!-- Row 1 -->
+                    <td class="dayCenter">Forest Valley Outdoor Education Center</td>
+                    <td class="overnightCenter">Etobicoke Outdoor Education Center</td>
+                </tr>
+                <tr> <!-- Row 2 -->
+                    <td class="dayCenter">Hillside Outdoor Education School</td>
+                    <td class="overnightCenter">Island Natural Science School</td>
+                </tr>
+                <tr> <!-- Row 3 -->
+                    <td class="dayCenter">Toronto Urban Studies Center</td>
+                    <td class="overnightCenter">Mono Cliffs Outdoor Education Center</td>
+                </tr>
+                <tr> <!-- Row 4 -->
+                    <td class="dayCenter">Warren Park Outdoor Education Center</td>
+                    <td class="overnightCenter">Scarborough Outdoor Education School</td>
+                </tr>
+                <tr> <!-- Row 5 -->
+                    <td class="dayCenter"></td>
+                    <td class="overnightCenter">Sheldon Center for Outdoor Education</td>
+                </tr>
+            </table>
 
             <div class="third-row">
             <!-- Quick blurb about other outdoor education centers in and around the GTA -->
