@@ -240,7 +240,7 @@
                 // Display each outdoor education center on the map with their appropriate icons
                 // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
                 edCenters.forEach((edCenters) => {
-                    const marker = new google.maps.Marker({
+                    new google.maps.Marker({
                         position: edCenters.position,
                         icon: icons[edCenters.type].icon,
                         animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
@@ -265,24 +265,43 @@
 
             ////// CODE TO ADD INFO WINDOW BEGIN //////
             
-            // Create info window, which will include the title/name of the outdoor education center
-            edCenters.forEach((edCenters) => {
-                const infoWindow = new google.maps.InfoWindow({
-                    position: edCenters.position,
-                    content: edCenters.title,
-                    map: tdsbcenters,
-                });
+            var infowindow = new google.maps.InfoWindow({ 
+                osition: edCenters.position,
+                content: edCenters.title,
+                map: tdsbcenters,
             });
+
+            //creates an infowindow 'key' in the marker.
+            edCenters.infowindow = infowindow;
+
+            //finally call the explicit infowindow object
+            edCenters.addListener('click', function() {
+                return this.infowindow.open(map, this);
+            })
+
+            // Alternate way of adding infowindow listeners
+            google.maps.event.addListener(edCenters, 'click', function() {
+                this.infowindow.open(map, this); 
+            });
+
+            // Create info window, which will include the title/name of the outdoor education center
+      //      edCenters.forEach((edCenters) => {
+      //          const infoWindow = new google.maps.InfoWindow({
+      //              position: edCenters.position,
+      //              content: edCenters.title,
+      //              map: tdsbcenters,
+      //          });
+      //      });
             
             // Supposed to open the info window on click, but it keeps them all open?
-            edCenters.forEach((edCenters) => {
-                marker.addListener('click', () => {
-                    infoWindow.open({
-                        anchor: edCenters,
-                        map: tdsbcenters,
-                    });
-                });           
-            });          
+      //      edCenters.forEach((edCenters) => {
+      //          marker.addListener('click', () => {
+      //              infoWindow.open({
+     //                   anchor: edCenters,
+     //                   map: tdsbcenters,
+     //               });
+     //           });           
+     //       });          
 
             //edCenters.forEach((edCenters) => {
                 //google.maps.event.addListener(edCenters, 'mouseover', function() {
