@@ -269,13 +269,16 @@
                     content: edCenters.title,
                     map: tdsbcenters,
                 });
-            });
-            
-            edCenters.forEach((edCenters) => {
                 edCenters.addListener('click', function() {
                     infoWindow.open(tdsbcenters, edCenters)
-                });           
-            });          
+                });
+            });
+            
+        //    edCenters.forEach((edCenters) => {
+         //       edCenters.addListener('click', function() {
+        //            infoWindow.open(tdsbcenters, edCenters)
+         //       });           
+        //    });          
 
             //edCenters.forEach((edCenters) => {
                 //google.maps.event.addListener(edCenters, 'mouseover', function() {
