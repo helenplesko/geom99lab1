@@ -27,7 +27,7 @@
                 padding: 0
             }  
 
-            /* Customization of container to hold all the rows with information */
+            /* Customization of container to hold all the page's information 
             .container {
                 display: flex; 
                 width: 100%; 
@@ -115,6 +115,7 @@
                 vertical-align: middle;
             }
 
+            /* Customization of the second map, the iframe of other outdoor education centers in/around the GTA */
             .second-map {
                 height: 500px;
                 width: 100%;
@@ -123,6 +124,8 @@
 
             /******** CSS FOR TABLE BEGIN ********/
             /* Colors from https://colorbrewer2.org/ */
+
+            /* Customization of the day centers column heading in the table */
             .dayTableTitle {
                 background-color: #fec44f;
                 padding: 14px;
@@ -130,10 +133,12 @@
                 font-size: 18px;
             }
 
+            /* Customization of the rows of day centers in the table */
             .dayCenter {
                 background-color: #fff7bc;
             }
 
+            /* Customization of the overnight centers column heading in the table */
             .overnightTableTitle {
                 background-color: #9ecae1;
                 padding: 14px;
@@ -141,10 +146,12 @@
                 font-size: 18px;
             }
 
+            /* Customization of the rows of overnight centers in the table */
             .overnightCenter {
                 background-color: #deebf7;
             }
 
+            /* Customization of the table rows */
             #centerList td {
                 border: 1px;
                 padding: 10px;
@@ -246,7 +253,7 @@
                 });
 
                 // Display legend with icon and center type
-                    // Not sure why it is not appearing directly on the map... it is under the map instead
+                    // Not sure why it is not appearing directly on the map... it is under the map instead, which I honestly don't mind the looks of
                 const legend = document.getElementById("legend");
                 for (const key in icons) {
                     const type = icons[key];
@@ -269,16 +276,17 @@
                     content: edCenters.title,
                     map: tdsbcenters,
                 });
-                edCenters.addListener('click', function() {
-                    infoWindow.open(tdsbcenters, edCenters)
-                });
             });
             
-        //    edCenters.forEach((edCenters) => {
-         //       edCenters.addListener('click', function() {
-        //            infoWindow.open(tdsbcenters, edCenters)
-         //       });           
-        //    });          
+            // Supposed to open the info window on click, but it keeps them all open?
+            edCenters.forEach((edCenters) => {
+                edCenters.addListener('click', () => {
+                    infoWindow.open({
+                        anchor: edCenters,
+                        map: tdsbcenters,
+                    });
+                });           
+            });          
 
             //edCenters.forEach((edCenters) => {
                 //google.maps.event.addListener(edCenters, 'mouseover', function() {
@@ -368,6 +376,12 @@
             <iframe class="second-map" id="OECGoogleMyMaps" src="https://www.google.com/maps/d/embed?mid=1_C8I31gshMTjRJRnMaqbOoMaiogBt9M&ehbc=2E312F" title="Outdoor Education Centers">
             </iframe>
             
+            <!-- Add callback for initMap -->
+            <script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+			defer>
+		    </script>
+
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="footer-text">
                 <p>Page Completed by Helen Plesko</p>
