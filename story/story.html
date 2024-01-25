@@ -264,56 +264,26 @@
 
 
             ////// CODE TO ADD INFO WINDOW BEGIN //////
+            // Tried to follow similar format to the markers above
             
-            var infowindow = new google.maps.InfoWindow({ 
-                position: edCenters.position,
-                content: edCenters.title,
-                map: tdsbcenters,
-            });
-
-            //creates an infowindow 'key' in the marker.
-            marker.infowindow = infowindow;
-
-            //finally call the explicit infowindow object
-            marker.addListener('click', function() {
-                return this.infowindow.open(map, this);
-            });
-
-            // Alternate way of adding infowindow listeners
-         //   google.maps.event.addListener(marker, 'click', function() {
-        //        this.infowindow.open(map, this); 
-       //     });
-
             // Create info window, which will include the title/name of the outdoor education center
-      //      edCenters.forEach((edCenters) => {
-      //          const infoWindow = new google.maps.InfoWindow({
-      //              position: edCenters.position,
-      //              content: edCenters.title,
-      //              map: tdsbcenters,
-      //          });
-      //      });
+            edCenters.forEach((edCenters) => {
+                const infoWindow = new google.maps.InfoWindow({
+                    position: edCenters.position,
+                    content: edCenters.title,
+                    map: tdsbcenters,
+                });
+            });
             
-            // Supposed to open the info window on click, but it keeps them all open?
-      //      edCenters.forEach((edCenters) => {
-      //          marker.addListener('click', () => {
-      //              infoWindow.open({
+    //        // Supposed to open the info window on click, but it keeps them all open?
+    //        edCenters.forEach((edCenters) => {
+    //            marker.addListener('click', () => {
+    //                infoWindow.open({
      //                   anchor: edCenters,
-     //                   map: tdsbcenters,
-     //               });
-     //           });           
-     //       });          
-
-            //edCenters.forEach((edCenters) => {
-                //google.maps.event.addListener(edCenters, 'mouseover', function() {
-                   // if (activeInfoWindow != null) activeInfoWindow.close();
-             //       infoWindow.close();
-             //       infoWindow.open({
-             //           anchor: edCenters,
-             //           map: tdsbcenters,
-            //        });
-             //       activeInfoWindow = infoWindow;
-             //   });           
-           // });           
+    //                    map: tdsbcenters,
+    //                });
+    //            });           
+    //        });                  
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
