@@ -28,7 +28,7 @@
             }  
 
             /* Customization of container to hold all the rows with information */
-            .row-container {
+            .container {
                 display: flex; 
                 width: 100%; 
                 height: 100%; 
@@ -116,8 +116,9 @@
             }
 
             .second-map {
-                height: 400px;
+                height: 500px;
                 width: 100%;
+                margin-bottom: 17px;
             }
 
             /******** CSS FOR TABLE BEGIN ********/
@@ -184,7 +185,7 @@
                 };
                 
                 // Set location and type of the outdoor education centers
-                // Information about the outdoor ed centers retrived from: https://schoolweb.tdsb.on.ca/toes/ 
+                // Information about the outdoor ed centers retrieved from: https://schoolweb.tdsb.on.ca/toes/ 
                 const edCenters = [
                     {
                         position: new google.maps.LatLng(43.768095, -79.451559),
@@ -224,7 +225,7 @@
                     {
                         position: new google.maps.LatLng(45.535555, -79.143270),
                         type: "overnightOC",
-                        title: "Scarborough Outdoor Education School",
+                        title: "Scarborough Outdoor Education School (Camp Kearney)",
                     },
                     {
                         position: new google.maps.LatLng(44.081076, -79.981549),
@@ -269,18 +270,24 @@
                     map: tdsbcenters,
                 });
             });
-
+            
             edCenters.forEach((edCenters) => {
-                google.maps.event.addListener(edCenters, 'mouseover', function() {
-                    if (activeInfoWindow != null) activeInfoWindow.close();
-                    infoWindow.close();
-                    infoWindow.open({
-                        anchor: edCenters,
-                        map: tdsbcenters,
-                    });
-                    activeInfoWindow = infoWindow;
+                edCenters.addListener('click', function() {
+                    infoWindow.open(tdsbcenters, edCenters)
                 });           
-            });           
+            });          
+
+            //edCenters.forEach((edCenters) => {
+                //google.maps.event.addListener(edCenters, 'mouseover', function() {
+                   // if (activeInfoWindow != null) activeInfoWindow.close();
+             //       infoWindow.close();
+             //       infoWindow.open({
+             //           anchor: edCenters,
+             //           map: tdsbcenters,
+            //        });
+             //       activeInfoWindow = infoWindow;
+             //   });           
+           // });           
         };
 
             ////// CODE TO ADD INFO WINDOW END //////
@@ -290,7 +297,7 @@
     </head>
 
     <body>
-        <div class="row-container">
+        <div class="container">
 
             <!-- HTML page header -->
             <header class="first-row">
@@ -300,9 +307,9 @@
             <div class="second-row">
                 <!-- Quick blurb about why outdoor education is important -->
                 <h2>Why is outdoor education important?</h2>
-                <p> A class trip to an outdoor education center at any time of the year will surely be a highlight of the students' school year.
+                <p> A class field trip to an outdoor education center will surely be a highlight of the students' school year.
                     Students will get to participate in activities that will help them build their confidence and teamwork skills.
-                    It will also provide the students with a unique experience that simply can't be achieved in the classroom.
+                    It will also provide the students with a unique learning experience that is difficult to achieved in the classroom.
                 </p>
 
                 <!-- Quick blurb about outdoor education centers with the TDSB -->
@@ -335,7 +342,7 @@
                 </tr>
                 <tr> <!-- Row 4 -->
                     <td class="dayCenter">Warren Park Outdoor Education Center</td>
-                    <td class="overnightCenter">Scarborough Outdoor Education School</td>
+                    <td class="overnightCenter">Scarborough Outdoor Education School (Camp Kearney)</td>
                 </tr>
                 <tr> <!-- Row 5 -->
                     <td class="dayCenter"></td>
@@ -346,8 +353,9 @@
             <div class="third-row">
             <!-- Quick blurb about other outdoor education centers in and around the GTA -->
                 <h2>Other Outdoor Education Centers</h2>
-                <p> There are many more outdoor education centers offering school trips in and around the Greater Toronto Area.
-                    This list is not complete, but it highlights some wellknown ones in the area.
+                <p> There are many more outdoor education centers offering school field trips in and around the Greater Toronto Area.
+                    This list is not complete, but it highlights some wellknown ones in the area. 
+                    Visit their websites to learn more about the programs they offer.
                 </p>
             </div>
 
