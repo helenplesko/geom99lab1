@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
     <head>
-
         <title>Google Map Story</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-		<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>   
+		<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
+        </script>  
 
         <style>
+
+            /******** CSS FOR BODY/PAGE FORMATTING BEGIN ********/
             /* Customization of body */
             body {
                 font-family: arial, helvetica, sans-serif;
                 background-color: #fff;
             }
-
             /* Customization of body and html document */
             body, html {        
                 margin: 0; 
                 padding: 0
             }  
-
             /* Customization of container to hold all the page's information */
             .container {
                 display: flex; 
@@ -32,22 +30,22 @@
                 background-color: #fff; 
                 overflow: hidden;
             }
-            
             /* Customization of first row, with header information */
             .first-row {
                 background-color: #e5f5e0; 
             }
-            
             /* Customization of second and third row, with info about outdoor education */
             .second-row, .third-row {
                 background-color: #fff; 
             }
+            /******** CSS FOR BODY/PAGE FORMATTING END ********/
 
-            /* Customization of the footer */
+
+            /******** CSS FOR TEXT BEGIN ********/
+            /* Customization of the footer text */
             .footer-text {
                 background-color: #e5f5e0; 
             }
-
             /* Customization of the first header text */
             h1 {
                 color: #000;
@@ -57,7 +55,6 @@
                 padding-left: 10px;
                 padding-right: 10px;
             }
-
             /* Customization of the second header text */
             h2 {
                 color: #000;
@@ -67,7 +64,6 @@
                 padding-left: 10px;
                 padding-right: 10px;
             }
-
             /* Customization of the paragraph text */
             p {
                 color: #000;
@@ -78,20 +74,31 @@
                 padding-left: 10px;
                 padding-right: 10px;
             }
-
             /* Customization of the paragraph text in footer */
             .footer-text p {
                 text-align: center;
                 font-size: 12px;
                 color: #000;
             }
+            /******** CSS FOR TEXT END ********/
         
-            /* Customization of the TDSB outdoor education center map */
+
+            /******** CSS FOR MAPS BEGIN ********/
+            /* Customization of the first map, displaying TDSB outdoor education centers */
             #tdsbcenters {
                 height: 400px;
                 width: 100%;
             }
+            /* Customization of the second map, the iframe of other outdoor education centers in/around the GTA */
+            .second-map {
+                height: 500px;
+                width: 100%;
+                margin-bottom: 17px;
+            }
+            /******** CSS FOR MAPS END ********/
 
+
+            /******** CSS FOR LEGEND BEGIN ********/
             /* Customization of the legend */
             #legend {
                 font-family: arial, helvetica, sans-serif;
@@ -100,53 +107,43 @@
                 margin: 5px;
                 border: 2px dotted #000;
             }
-
             /* Customization of heading 3 in legend */
             #legend h3 {
                 margin-top: 0;  
             }
-
             /* Customization of image in legend to line up with the middle of the text */
             #legend img {
                 vertical-align: middle;
             }
+            /******** CSS FOR TABLE END ********/
 
-            /* Customization of the second map, the iframe of other outdoor education centers in/around the GTA */
-            .second-map {
-                height: 500px;
-                width: 100%;
-                margin-bottom: 17px;
-            }
 
             /******** CSS FOR TABLE BEGIN ********/
             /* Colors from https://colorbrewer2.org/ */
-
             /* Customization of the day centers column heading in the table */
             .dayTableTitle {
                 background-color: #fec44f;
                 padding: 14px;
                 border-radius: 15px;
                 font-size: 18px;
+                width: 50%;
             }
-
             /* Customization of the rows of day centers in the table */
             .dayCenter {
                 background-color: #fff7bc;
             }
-
             /* Customization of the overnight centers column heading in the table */
             .overnightTableTitle {
                 background-color: #9ecae1;
                 padding: 14px;
                 border-radius: 15px;
                 font-size: 18px;
+                width: 50%;
             }
-
             /* Customization of the rows of overnight centers in the table */
             .overnightCenter {
                 background-color: #deebf7;
             }
-
             /* Customization of the table rows */
             #centerList td {
                 border: 1px;
@@ -155,27 +152,26 @@
                 text-align: center;
                 font-size: 16px;
             }
-
             /******** CSS FOR TABLE END ********/
 
         </style>
 
         <script>
 
-            ////// CODE FOR MAP WITH ICONS AND LEGEND BEGIN //////
-            // JS template called legend, from https://googlemaps.github.io/js-samples/
-
-            // Load map centered on Toronto, ON, with a zoom of 7, displaying day and overnight outdoor education centers with TDSB
+            // Load map centered on Huntsville area, with a zoom of 7
             function initMap() {
                 tdsbcenters = new google.maps.Map(document.getElementById("tdsbcenters"), {
                     zoom: 7,
                     center: new google.maps.LatLng(44.89793, -79.33506),
                 });
 
-                // Set icon images and names
+                ////// CODE FOR CUSTOM ICONS BEGIN //////
+                // Icon code inspired by "custom-markers" from https://googlemaps.github.io/js-samples/
                 // Icons from: https://icons8.com/icons/
-                    // Icons will appear on map and in the legend
-                    // Names will appear in the legend
+                // Animation code inspired by "marker-animations" from https://googlemaps.github.io/js-samples/
+                // Information about the outdoor ed centers retrieved from: https://schoolweb.tdsb.on.ca/toes/ 
+
+                // Set custom icon images and names
                 const icons = {
                     dayOC: {
                         name: "Day Outdoor Education Center",
@@ -188,7 +184,6 @@
                 };
                 
                 // Set location and type of the outdoor education centers
-                // Information about the outdoor ed centers retrieved from: https://schoolweb.tdsb.on.ca/toes/ 
                 const edCenters = [
                     {
                         position: new google.maps.LatLng(43.768095, -79.451559),
@@ -238,20 +233,26 @@
                 ];
 
                 // Display each outdoor education center on the map with their appropriate icons
-                // Animation code inspiration: https://developers.google.com/maps/documentation/javascript/examples/marker-animations
                 edCenters.forEach((edCenters) => {
-                    const marker = new google.maps.Marker({
+                    new google.maps.Marker({
                         position: edCenters.position,
                         icon: icons[edCenters.type].icon,
-                        title: edCenters.title,
+                        title: edCenters.title,     // The name of the outdoor education center will display when the mouse is hovered over the icon.
                         animation: google.maps.Animation.DROP,  // A drop animation is added to each marker when they appear on the map.
                         map: tdsbcenters,
                     });
                 });
 
-                // Display legend with icon and center type
-                    // Not sure why it is not appearing directly on the map... it is under the map instead, which I honestly don't mind the looks of
+                ////// CODE FOR CUSTOM ICONS END //////
+
+
+                ////// CODE FOR MAP LEGEND BEGIN //////
+                // Code inspired by "legend" from https://googlemaps.github.io/js-samples/
+
+                // Create the legend
                 const legend = document.getElementById("legend");
+
+                // Add the content to the legend
                 for (const key in icons) {
                     const type = icons[key];
                     const name = type.name;
@@ -261,37 +262,34 @@
                     legend.appendChild(div);
                 }
 
-            ////// CODE FOR MAP WITH ICONS AND LEGEND END //////
+                ////// CODE FOR MAP LEGEND END //////
 
 
-            ////// CODE TO ADD INFO WINDOW BEGIN //////
-            // Tried to follow similar format to the markers above
-            
-            // Create info window, which will include the title/name of the outdoor education center
-            edCenters.forEach((edCenters) => {
-                const infoWindow = new google.maps.InfoWindow({
-                    position: edCenters.position,
-                    content: edCenters.title,
-                    map: tdsbcenters,
-                });
-            });
-            
-            // Tried to make the info windows open on click, but didn't have luck...
-            // At the moment they just stay open, and don't reopen when you manually close it
-            edCenters.forEach((edCenters) => {
-                marker.addListener('click', () => {
-                    infoWindow.open({
-                        anchor: edCenters,
-                        map: tdsbcenters,
-                    });
-                });           
-            });                  
+                ////// CODE TO ADD INFO WINDOW BEGIN //////
+                // Attempted to add an info window for each center, that when the center/icon is clicked, the info window pops up and displays the name/title.
+                // I couldn't get it to work how I wanted it to, so I settled for the name being displayed when the mouse is hovered over the icon instead.
+                // Kept the code here for reference.
+
+                //edCenters.forEach((edCenters) => {
+                //    const infoWindow = new google.maps.InfoWindow({
+                //        position: edCenters.position,
+                //        content: edCenters.title,
+                //        map: tdsbcenters,
+                //    });
+                //});
+                //edCenters.forEach((edCenters) => {
+                //    marker.addListener('click', () => {
+                //        infoWindow.open({
+                //            anchor: edCenters,
+                //            map: tdsbcenters,
+                //        });
+                //    });           
+                //});    
+                ////// CODE TO ADD INFO WINDOW END //////              
         };
 
-            ////// CODE TO ADD INFO WINDOW END //////
             window.initMap = initMap;
         </script>
-
     </head>
 
     <body>
@@ -319,8 +317,10 @@
             
             <!-- Map of the day and overnight outdoor education centers associated with TDSB -->
             <div id="tdsbcenters"></div>
+            <!-- Legend to go with tdsbcenters map -->
             <div id="legend"><h3>Legend</h3></div>
 
+            <!-- Table displaying the TDSB day and overnight outdoor education centers-->
             <table id="centerList">
                 <tr> <!-- Column Headings -->
                     <th class="dayTableTitle">DAY</th>
@@ -343,7 +343,7 @@
                     <td class="overnightCenter">Scarborough Outdoor Education School (Camp Kearney)</td>
                 </tr>
                 <tr> <!-- Row 5 -->
-                    <td class="dayCenter"></td>
+                    <td class="dayCenter"></td>     <!-- Intentionally empty row because there are only 4 day centers -->
                     <td class="overnightCenter">Sheldon Center for Outdoor Education</td>
                 </tr>
             </table>
@@ -362,10 +362,6 @@
             <!-- Info gathered from memory and https://trca.ca/learning/education-centres/ -->
             <iframe class="second-map" id="OECGoogleMyMaps" src="https://www.google.com/maps/d/embed?mid=1_C8I31gshMTjRJRnMaqbOoMaiogBt9M&ehbc=2E312F" title="Outdoor Education Centers">
             </iframe>
-
-            <!-- Adding callback for initMap -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
-            </script>
 
             <!-- Footer mentioning disclaimer of the info on the page -->
             <footer class="footer-text">
