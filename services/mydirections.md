@@ -18,11 +18,11 @@ https://maps.googleapis.com/maps/api/directions/json?origin=place_id%3AChIJ0YaYl
 
 I used this tool to convert the time to an integer: https://www.unixtimestamp.com/
 
-The JSON results for this route are pasted into ```mydirections.json``` in this repository.
+The JSON results for this route are pasted into [mydirections.json](services/mydirections.json) in this repository.
 
 ## Optional URLs
 
-At the second waypoint (OMV gas station) you might see some planes, helicopters, or even hot air balloons nearby. That is because the Airport Lesce is located nearby.
+At the second waypoint (OMV gas station) you might see some planes, helicopters, or even hot air balloons. That is because the Airport Lesce is located nearby.
 ```
 https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJ0wL-uE-WekcR6-_C8JHoWSs&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
@@ -31,6 +31,20 @@ When at the top of Bled Castle, you get a beautiful view of the Church in the mi
 ```
 https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJcWwyNDiRekcRQ-xUYGhbpdY&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
+
+The URLs to view each location on Google Maps is near the end of the JSON pages above. Here they are as well for easy retrieval:
+
+Airport Lesce:
+```
+https://maps.google.com/?cid=3123783530065358827
+```
+
+Assumption of Maria Church:
+```
+https://maps.google.com/?cid=15466868999124741187
+```
+
+I hope to go back there sometime soon!
 
 ____
 ## Rubric
