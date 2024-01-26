@@ -18,7 +18,7 @@ https://maps.googleapis.com/maps/api/directions/json?origin=place_id%3AChIJ0YaYl
 
 I used this tool to convert the time to an integer: https://www.unixtimestamp.com/
 
-The JSON results for this route are pasted into [mydirections.json](services/mydirections.json) in this repository.
+The JSON results for this route are pasted into [mydirections.json](mydirections.json) in this repository folder.
 
 ## Optional URLs
 
